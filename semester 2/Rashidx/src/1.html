@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Maker Flowchart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f4f4f9;
+    }
+    .flowchart-container {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .box {
+      background-color: #fff;
+      border: 2px solid #4CAF50;
+      padding: 20px;
+      margin: 10px;
+      width: 300px;
+      border-radius: 8px;
+    }
+    .arrow {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 20px solid #4CAF50;
+      margin: 20px 0;
+    }
+    .flowchart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .flowchart-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="flowchart-container">
+    <div class="flowchart">
+      <!-- Start -->
+      <div class="box">Start</div>
+
+      <!-- Filter Options -->
+      <div class="arrow"></div>
+      <div class="box">Display Filter: Easy, Medium, Hard</div>
+
+      <!-- Select Difficulty -->
+      <div class="arrow"></div>
+      <div class="box">Select Difficulty Filter</div>
+
+      <!-- Filter Recipes -->
+      <div class="arrow"></div>
+      <div class="box">Filter Recipes by Difficulty</div>
+
+      <!-- Display Filtered Recipes -->
+      <div class="arrow"></div>
+      <div class="box">Display Filtered Recipes</div>
+
+      <!-- Select Recipe -->
+      <div class="arrow"></div>
+      <div class="box">Select Recipe to View</div>
+
+      <!-- View Recipe Details -->
+      <div class="arrow"></div>
+      <div class="box">Display Recipe Details</div>
+
+      <!-- End -->
+      <div class="arrow"></div>
+      <div class="box">End</div>
+    </div>
+  </div>
+</body>
+</html>
+  

@@ -1,0 +1,112 @@
+<table border="1">
+    <thead>
+      <tr>
+        <th><strong>Test Case</strong></th>
+        <th><strong>Objective</strong></th>
+        <th><strong>Test Scenarios</strong></th>
+        <th><strong>Expected Outcome</strong></th>
+        <th><strong>Actual Outcome</strong></th>
+        <th><strong>Status</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>4.1 Input Validation</strong></td>
+        <td>To verify that invalid inputs are handled correctly.</td>
+        <td>
+          <ul>
+            <li>Input negative numbers for weight or height.</li>
+            <li>Leave the weight or height field empty.</li>
+            <li>Input non-numeric values in the weight or height field.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Display an error message: "Please enter valid values for weight and height."</li>
+            <li>Result section remains hidden or displays no BMI value.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Error message displayed correctly.</li>
+            <li>Result section remains hidden.</li>
+          </ul>
+        </td>
+        <td>Passed</td>
+      </tr>
+      <tr>
+        <td><strong>4.2 BMI Calculation</strong></td>
+        <td>To confirm that BMI is calculated accurately based on valid inputs.</td>
+        <td>
+          <ul>
+            <li>Input: Weight = 70 kg, Height = 170 cm.</li>
+            <li>Input: Weight = 50 kg, Height = 170 cm.</li>
+            <li>Input: Weight = 100 kg, Height = 180 cm.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>BMI = 24.22 (Normal weight).</li>
+            <li>BMI = 17.30 (Underweight).</li>
+            <li>BMI = 30.86 (Overweight).</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>BMI values calculated correctly with two decimal places.</li>
+            <li>Categories displayed as expected.</li>
+          </ul>
+        </td>
+        <td>Passed</td>
+      </tr>
+      <tr>
+        <td><strong>4.3 Floating Animation</strong></td>
+        <td>To ensure the container floats continuously.</td>
+        <td>
+          <ul>
+            <li>Open the application in different browsers (Chrome, Firefox, Edge).</li>
+            <li>Check the animation after resizing the browser window.</li>
+          </ul>
+        </td>
+        <td>The container floats smoothly up and down, without interruption.</td>
+        <td>Animation worked smoothly in all tested browsers and during resizing.</td>
+        <td>Passed</td>
+      </tr>
+      <tr>
+        <td><strong>4.4 Button Hover Animation</strong></td>
+        <td>To verify the hover effect on the Calculate BMI button.</td>
+        <td>
+          <ul>
+            <li>Hover over the button with a mouse.</li>
+            <li>Move the mouse away from the button.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Font size enlarges to 18px on hover.</li>
+            <li>Font size resets to 16px on mouse leave.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Hover animation applied correctly.</li>
+          </ul>
+        </td>
+        <td>Passed</td>
+      </tr>
+      <tr>
+        <td><strong>4.5 Result Display Animation</strong></td>
+        <td>To confirm that the result fades in correctly after calculation.</td>
+        <td>
+          <ul>
+            <li>Calculate BMI after providing valid inputs.</li>
+            <li>Recalculate BMI with new inputs.</li>
+          </ul>
+        </td>
+        <td>The result section fades in smoothly with updated values.</td>
+        <td>The result section displayed as expected with fade-in effect.</td>
+        <td>Passed</td>
+      </tr>
+    </tbody>
+  </table>
+  

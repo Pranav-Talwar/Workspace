@@ -1,0 +1,50 @@
+<table border="1">
+    <thead>
+        <tr>
+            <th>Test Case</th>
+            <th>Test Description</th>
+            <th>Test Steps</th>
+            <th>Expected Result</th>
+            <th>Actual Outcome</th>
+            <th>Pass/Fail</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Click Event on Box</td>
+            <td>Test if the color of the box changes when clicked.</td>
+            <td>
+                1. Click on the first box (id="1").<br>
+                2. Observe the box color.
+            </td>
+            <td>The color of the box should change to blue (rgb(49, 182, 181)) after being clicked.</td>
+            <td>The color of box 1 changes to blue after being clicked.</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>Timer Ends Event</td>
+            <td>Test if the box color updates when the timer reaches 0.</td>
+            <td>
+                1. Start the timer for 30 seconds.<br>
+                2. Wait for the timer to reach 0.<br>
+                3. Observe the box color.
+            </td>
+            <td>The first box (id="1") should change to blue (rgb(49, 182, 181)) after the timer ends.</td>
+            <td>Box 1 turns blue after the timer ends.</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>Automatic Coloring of Box 2</td>
+            <td>Test if box 2 automatically colors when box 1 is already colored after the timer ends.</td>
+            <td>
+                1. Start the timer for 30 seconds.<br>
+                2. Wait for the timer to reach 0.<br>
+                3. Observe the box colors.<br>
+                4. Check if box 2 is automatically colored after box 1.
+            </td>
+            <td>The second box (id="2") should automatically change to blue (rgb(49, 182, 181)) once box 1 is colored.</td>
+            <td>Box 2 changes color to blue after box 1 is colored.</td>
+            <td>Pass</td>
+        </tr>
+    </tbody>
+</table>

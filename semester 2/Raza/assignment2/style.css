@@ -1,0 +1,195 @@
+/* General Body Styles */
+body {
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    color: #202122;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header Section (Similar to Wikipedia's top header) */
+header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    text-align: left;
+    border-bottom: 1px solid #a2a9b1;
+}
+
+header h1 {
+    font-size: 1.8em;
+    margin: 0;
+    color: #202122;
+}
+
+/* Navigation Menu */
+#navigationMenu {
+    margin-top: 20px;
+    padding: 0;
+    border: 1px solid #a2a9b1;
+    background-color: #f5f5f5;
+    width: 200px;
+    float: left;
+}
+
+#navigationMenu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navigationMenu ul li {
+    margin: 10px 0;
+}
+
+#navigationMenu ul li a {
+    color: #0645ad;
+    text-decoration: none;
+    display: block;
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+#navigationMenu ul li a:hover {
+    background-color: #dddddd;
+    text-decoration: underline;
+}
+
+/* Main Content Area */
+main {
+    margin-left: 220px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #a2a9b1;
+}
+
+/* Home Section */
+#home {
+    padding: 20px 0;
+}
+
+#home h1 {
+    font-size: 1.8em;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 10px;
+}
+
+#home p {
+    margin-top: 10px;
+}
+
+/* Product Gallery Section */
+#products {
+    padding: 20px 0;
+}
+
+#products h2 {
+    font-size: 1.6em;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 10px;
+}
+
+.product-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.product-item img {
+    width: 150px;
+    height: auto;
+    display: block;
+    float: left;
+    margin-right: 15px;
+    border: 1px solid #a2a9b1;
+}
+
+.product-description {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.4;
+}
+
+.product-description:hover {
+    background-color: #f0f0f0;
+}
+
+/* FAQ Section */
+#faq {
+    padding: 20px 0;
+}
+
+#faq h2 {
+    font-size: 1.6em;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 10px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 1.1em;
+    color: #0645ad;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0;
+}
+
+.answer {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-left: 3px solid #a2a9b1;
+    display: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #a2a9b1;
+}
+
+/* Custom Animations */
+.custom-animation {
+    position: relative;
+    background-color: #ffffff;
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    animation: moveAcross 3s infinite alternate ease-in-out;
+}
+
+@keyframes moveAcross {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(300px);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #navigationMenu {
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    .product-item img {
+        float: none;
+        margin: 0 auto;
+        display: block;
+    }
+}

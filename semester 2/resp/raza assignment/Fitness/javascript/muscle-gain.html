@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strength Training & Exercises</title>
+    <link rel="stylesheet" href="nav.css">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(246, 238, 228);
+            color: #fff;
+            text-align: center;
+        }
+       
+        .container {
+            padding: 20px;
+            margin-top: 3%;
+
+        }
+        .exercise-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .exercise-card {
+            background-color: #292b2c;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            width: 300px;
+            transition: transform 0.3s;
+            overflow: hidden;
+        }
+        .exercise-card:hover {
+            transform: translateY(-10px);
+        }
+        .exercise-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .exercise-card h3 {
+            margin-top: 15px;
+            color: #00bfae;
+        }
+        .exercise-card p {
+            color: #ddd;
+        }
+        .tip-section {
+            margin-top: 30px;
+            background-color: #2c3e50;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .tip-section h2 {
+            color: #1abc9c;
+        }
+        .tip {
+            color: #ddd;
+            margin-bottom: 10px;
+        }
+        .back-link {
+            margin-top: 20px;
+            display: inline-block;
+            background: #1abc9c;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="../fitnessapp/home.html" class="nav-btn">Home</a></li>
+            <li><a href="../javascript/main.html" class="nav-btn">Workout Guide</a></li>
+            <li><a href="../bmi2/index.html" class="nav-btn">BMI App</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section class="exercise-section">
+            <div class="exercise-card">
+                <img src="goblet-squad.gif" alt="Squat Exercise">
+                <a href="squats.html"><h3>Squats</h3></a>
+                <p>Engage your quads, hamstrings, and glutes with proper squat techniques for muscle growth and strength.</p>
+                <br> <nav><a href="https://youtu.be/gcNh17Ckjgg?si=dhfq540qXL2vZaF5"> Youtube Video</a></nav>
+            </div>
+            <div class="exercise-card">
+                <img src="BenchPress.mov+(1).gif" alt="Bench Press">
+                <a href="benchpress.html"><h3>Bench press</h3></a>
+                <p>Target your chest, triceps, and shoulders with this fundamental upper-body exercise.</p>
+                <br> <nav><a href="https://youtu.be/4Y2ZdHCOXok?si=k_9VEN7BeWv2ZAqj"> Youtube Video</a></nav>
+            </div>
+            <div class="exercise-card">
+                <img src="stiffleggeddeadlift-1496166270.gif" alt="Deadlift">
+                <a href="deadlift.html"><h3>Deadlift</h3></a>
+                <p>Strengthen your lower back, glutes, and hamstrings with proper deadlifting techniques.</p>
+                <br> <nav><a href="https://youtu.be/XxWcirHIwVo?si=H5rwauAkh62MzzXT"> Youtube Video</a></nav>
+            </div>
+            <div class="exercise-card">
+                <img src="pull-up.gif" alt="Pull-Ups">
+                
+                <a href="pullups.html"><h3>Pull-Ups</h3></a>
+                <p>Improve your upper body strength, focusing on your back and biceps with pull-up variations.</p>
+                <br> <nav><a href="https://youtu.be/bb8_5vZV5dU?si=6VdmiD3zO9zTcOjV"> Youtube Video</a></nav>
+            </div>
+        </section>
+
+        <section class="tip-section">
+            <h2>Strength Training Tips</h2>
+            <p class="tip">Always warm up before starting your strength workout to prevent injuries.</p>
+            <p class="tip">Maintain proper form to maximize results and minimize the risk of injury.</p>
+            <p class="tip">Allow sufficient rest between sets to ensure muscle recovery and growth.</p>
+        </section>
+        <a href="main.html" class="back-link">Back to Home</a>
+    </div>
+
+</body>
+</html>

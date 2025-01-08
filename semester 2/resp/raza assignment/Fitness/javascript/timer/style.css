@@ -1,0 +1,83 @@
+/* General styling for the body */
+body {
+    display: flex; /* Align items in a flex container for flexibility */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align all items horizontally */
+}
+
+/* Container for the timer application */
+#container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center-align elements within the container */
+    justify-content: center; /* Horizontally center-align elements */
+    padding: 20px; /* Add spacing inside the container */
+    gap: 20px; /* Space between child elements */
+    flex-direction: row; /* Arrange elements (timer display and buttons) horizontally */
+}
+
+/* Styling for the timer display */
+#display {
+    font-size: 2rem; /* Set a readable font size */
+    color: white; /* White text color for better contrast */
+    background-color: rgb(147, 143, 143); /* Gray background to match buttons */
+    padding: 8px 1px; /* Space inside the display to align text properly */
+    width: 100px; /* Fixed width to match buttons for a uniform appearance */
+    border: 2px solid black; /* Black border for better visibility */
+    text-align: center; /* Center-align the timer text */
+    text-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.75); /* Add subtle shadow for a polished look */
+}
+
+/* Common styling for button containers */
+#timeButtons, #controlButtons {
+    display: flex; /* Use flexbox to organize buttons */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Common styling for buttons */
+#timeButtons button, #controlButtons button {
+    font-size: 1.2rem; /* Slightly larger font for readability */
+    font-weight: bold; /* Bold font to make text stand out */
+    padding: 15px 16px; /* Add sufficient padding for a button-like appearance */
+    border: 2px solid black; /* Black border for definition */
+    cursor: pointer; /* Change cursor to pointer to indicate clickability */
+    color: white; /* White text for good contrast */
+    background-color: #007b7f;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    width: 100px; /* Fixed width for consistency with the timer display */
+}
+
+/* Hover effect for buttons */
+#timeButtons button:hover, #controlButtons button:hover {
+    background-color: #025e61;
+}
+#setSystem {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 2.6rem; /* Set a readable font size */
+
+}
+.box:hover {
+   cursor: pointer;
+
+}
+.box1 {
+    width: 90px;
+    height: 50px;
+    background-color: #007b7f;
+    border: 2px solid black; /* Black border for better visibility */
+    text-align: center;
+    font-size: 2.4rem; /* Set a readable font size */
+    color: aliceblue;
+    font-weight: bold; /* Bold font to make text stand out */
+
+}

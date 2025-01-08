@@ -1,0 +1,272 @@
+/* Reset and Global Styles */
+/* Reset margin and padding for all elements to ensure consistent spacing across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set global font, background color, text color, and line height */
+body {
+    font-family: 'Arial', sans-serif; /* Set the font to Arial for a clean, readable style */
+    background-color: #fff; /* Set background color to white */
+    color: #333; /* Set text color to dark gray for better readability */
+    line-height: 1.6; /* Set line height for improved readability */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: rgb(0, 0, 0); /* Set navbar background color to black */
+    padding: 15px 20px; /* Add padding inside the navbar */
+    position: fixed; /* Fix the navbar at the top of the page */
+    width: 100%; /* Set navbar to span the full width of the page */
+    top: 0; /* Align the navbar to the top */
+    z-index: 100; /* Ensure navbar stays above other content */
+}
+
+/* Style for the navigation links */
+.nav-links {
+    list-style-type: none; /* Remove default list styling */
+    display: flex; /* Display the nav items in a horizontal row */
+    justify-content: center; /* Center the nav items horizontally */
+}
+
+/* Style for each list item in the navigation */
+.nav-links li {
+    margin: 0 20px; /* Add horizontal margin between the nav items */
+}
+
+/* Style for the navigation buttons */
+.nav-btn {
+    color: #fff2f2; /* Set text color to light gray */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 18px; /* Set font size for nav buttons */
+    font-weight: bold; /* Make the font bold */
+    padding: 10px 15px; /* Add padding around the button text */
+    text-transform: uppercase; /* Capitalize the text */
+    border-radius: 5px; /* Round the corners of the button */
+    transition: all 0.3s ease; /* Add smooth transition for hover effects */
+}
+
+/* Hover effect for the nav buttons */
+.nav-btn:hover {
+    color: #0ff; /* Change text color to light cyan on hover */
+}
+
+/* Full Image Section with Text Overlay */
+.full-image {
+    position: relative; /* Allow for positioning of the text within the image */
+    width: 100%; /* Set the section width to 100% */
+    height: 100vh; /* Set the height to full viewport height */
+}
+.full-img {
+  
+    transition: transform 1s ease;
+    transform: scale(1); 
+  }
+  
+  
+  .full-img:hover {
+    transform: scale(1.1); 
+  }
+
+/* Style for the image within the full image section */
+.full-img {
+    width: 100%; /* Set image width to 100% */
+    height: 100%; /* Set image height to 100% */
+    object-fit: cover; /* Ensure the image covers the entire area without distortion */
+}
+
+/* Style for the overlay text on the image */
+.hero-text {
+    position: absolute; /* Position the text absolutely within the section */
+    top: 50%; /* Center the text vertically */
+    left: 50%; /* Center the text horizontally */
+    transform: translate(-50%, -50%); /* Offset the text to be perfectly centered */
+    color: rgb(255, 255, 0); /* Set text color to yellow */
+    text-align: center; /* Center the text inside the container */
+    z-index: 10; /* Ensure the text appears above the image */
+    padding: 0 20px; /* Add padding around the text */
+    width: 100%; /* Set width to 100% so the text takes up the full width */
+}
+
+/* Style for the h1 inside the hero text */
+.hero-text h1 {
+    font-size: 48px; /* Set the font size for the heading */
+    margin-bottom: 10px; /* Add some space below the heading */
+}
+
+/* Style for the paragraph text inside the hero section */
+.hero-text p {
+    font-size: 24px; /* Set the font size for the paragraph */
+    margin-top: 0; /* Remove top margin to bring text closer to heading */
+    line-height: 1.5; /* Improve readability by adjusting line height */
+}
+
+/* Style for the "Learn More" button */
+.learn {
+    background-color: black; /* Set the button background to black */
+    color: yellow; /* Set button text color to yellow */
+    width: 150px; /* Set the button width */
+    border-radius: 30px; /* Round the button corners */
+    border: 0; /* Remove any borders */
+    white-space: nowrap; /* Prevent text from wrapping to multiple lines */
+    padding: 15px 30px; /* Add padding inside the button */
+    font-size: 14px; /* Set the font size */
+    font-family: cursive; /* Set the font to cursive style */
+    font-style: italic; /* Make the font italic */
+    display: inline-block; /* Keep the button inline */
+    text-align: center; /* Center the text inside the button */
+}
+
+/* Hover effect for the "Learn More" button */
+.learn:hover {
+    background-color: yellow; /* Change the background to yellow on hover */
+    color: black; /* Change the text color to black on hover */
+}
+
+/* Manual Sections */
+.manual-section {
+    display: flex; /* Use flexbox to align items */
+    align-items: stretch; /* Stretch items to fill the available space */
+    justify-content: center; /* Center content horizontally */
+    height: 100vh; /* Set height to full viewport height */
+    padding: 0; /* Remove any padding */
+}
+
+/* Style for text sections on the left side of the screen */
+.text-left, .text-right {
+    width: 50%; /* Set width of the text sections to 50% */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: center; /* Center content horizontally */
+}
+
+/* Style for image sections on the left side of the screen */
+.image-left, .image-right {
+    width: 50%; /* Set width of the image sections to 50% */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: center; /* Center content horizontally */
+}
+/* Styling for b tag */
+b {
+    font-size: 45px; /* Set font size for bold text to 45px */
+}
+
+/* Text alignment and padding for left and right sections */
+.text-left, .text-right {
+    padding: 20px; /* Add padding inside the text containers */
+    text-align: center; /* Align text to the center */
+}
+
+/* Heading styling for text-left and text-right sections */
+.text-left h2, .text-right h2 {
+    font-size: 36px; /* Set font size for h2 headings to 36px */
+    margin-top: 40%; /* Add top margin to push the heading down */
+}
+
+/* Paragraph styling for text-left and text-right sections */
+.text-left p, .text-right p {
+    font-size: 30px; /* Set font size for paragraphs to 30px */
+    line-height: 1.8; /* Adjust line height for better readability */
+}
+
+/* Styling for manual images */
+.manual-img {
+    width: 100%; /* Set image width to 100% of its container */
+    height: 100%; /* Set image height to 100% of its container */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+}
+
+/* Text styling for dynamic text */
+#dynamic-text {
+    font-size: 40px; /* Set font size for dynamic text to 40px */
+    font-weight: bold; /* Make the text bold */
+    color: #edeaea; /* Set text color to light gray */
+    padding: 20px; /* Add padding around the text */
+    margin-top: 12%; /* Add top margin to position the text lower */
+    border-radius: 5px; /* Round the corners of the background */
+    background-color: rgb(0, 0, 0); /* Set background color to black */
+}
+
+/* Background color classes for different sections */
+.bg-color-1 {
+    background-color: rgb(246, 238, 228); /* Set background to light red */
+    color: #333333; /* Set text color to dark gray */
+}
+
+.bg-color-2 {
+    background-color: rgb(246, 238, 228); /* Set background to light red */
+    color: #333; /* Set text color to dark gray */
+}
+
+.bg-color-3 {
+    background-color: rgb(246, 238, 228); /* Set background to light red */
+    color: #333; /* Set text color to dark gray */
+}
+
+.bg-color-4 {
+    background-color: rgb(246, 238, 228); /* Set background to light red */
+}
+
+/* Values Section Styling */
+.values-section {
+    text-align: center; /* Center the text in the values section */
+    padding: 40px; /* Add padding around the values section */
+    background-color: #f6eee4; /* Set background color to light red */
+}
+
+/* Add bottom margin to the values section */
+.values-section {
+    margin-bottom: 20px; /* Add space below the values section */
+}
+
+/* Styling for the values list */
+.values-list {
+    list-style-type: none; /* Remove default list styling */
+    text-align: left; /* Align text to the left inside the list */
+    margin-top: 8%; /* Add top margin to space out the list */
+}
+
+/* Styling for each list item in the values section */
+.values-list li {
+    margin: 10px 0; /* Add vertical spacing between list items */
+    font-size: 60px; /* Set font size for list items */
+}
+
+/* Styling for the value links */
+.value {
+    text-decoration: none; /* Remove underline from the links */
+    font-size: 20px; /* Set font size for the value links */
+    color: #333; /* Set text color to dark gray */
+    font-weight: bold; /* Make the text bold */
+    padding: 10px; /* Add padding inside the links */
+    text-transform: uppercase; /* Capitalize the text */
+    display: block; /* Make the link fill the entire list item */
+    text-align: center; /* Center the text inside the link */
+}
+
+/* Styling for the value link hover effect */
+.value-link {
+    text-decoration: none; /* Remove underline from the links */
+    font-size: 30px; /* Set font size for value links */
+    color: #333; /* Set text color to dark gray */
+    font-weight: bold; /* Make the text bold */
+    padding: 10px; /* Add padding inside the links */
+    text-transform: uppercase; /* Capitalize the text */
+    display: block; /* Make the link fill the entire list item */
+    text-align: center; /* Center the text inside the link */
+}
+
+/* Hover effect for value links */
+.value-link:hover {
+    color: #0ff; /* Change text color to cyan on hover */
+}
+
+/* Image container styling for values section */
+.image-container {
+    text-align: center; /* Center the images inside the container */
+}
+

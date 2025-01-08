@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise Timer with Celebration Feature</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    /* Styling for exercise sections */
+    .exercise {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
+      max-width: 400px;
+      position: relative;
+    }
+
+    .timer {
+      font-size: 1.5em;
+      margin: 10px 0;
+    }
+
+    button {
+      margin-right: 5px;
+      padding: 8px 12px;
+      font-size: 0.9em;
+      cursor: pointer;
+    }
+
+    /* Star animation elements */
+    .star {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: yellow;
+      border-radius: 50%;
+      opacity: 1;
+      z-index: 999;
+      pointer-events: none; /* Avoid interaction with the stars */
+      transform-origin: center center;
+    }
+
+    /* Animation for stars */
+    @keyframes star-move {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(var(--random-x), var(--random-y)) rotate(var(--random-rotation));
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Exercise Section -->
+  <div class="exercise">
+    <h3>Exercise Name: Push-Ups</h3>
+    <p>Instructions: Keep your back straight and go all the way down to ensure a full range of motion.</p>
+
+    <!-- Timer Display -->
+    <div class="timer">
+      <span class="minutes">00</span>:<span class="seconds">00</span>
+    </div>
+
+    <!-- Timer Controls -->
+    <button class="start-btn">Start</button>
+    <button class="pause-btn">Pause</button>
+    <button class="reset-btn">Reset</button>
+
+    <!-- Celebrate Button -->
+    <button class="celebrate-btn">Celebrate</button>
+  </div>
+
+  <!-- jQuery Script for Timer and Celebrate Feature -->
+  <script>
+    $(document).ready(function () {
+      let timerIntervals = {};
+
+      $(".start-btn").click(function () {
+        const $exercise = $(this).closest(".exercise");
+        const exerciseId = $exercise.index(".exercise");
+        
+        clearInterval(timerIntervals[exerciseId]);
+
+        timerIntervals[exerciseId] = setInterval(() => {
+          let currentTime = parseInt($exercise.data("time")) || 0;
+          currentTime++;
+          $exercise.data("time", currentTime);
+          updateDisplay($exercise, currentTime);
+        }, 1000);
+      });
+
+      $(".pause-btn").click(function () {
+        const exerciseId = $(this).closest(".exercise").index(".exercise");
+        clearInterval(timerIntervals[exerciseId]);
+      });
+
+      $(".reset-btn").click(function () {
+        const $exercise = $(this).closest(".exercise");
+        const exerciseId = $exercise.index(".exercise");
+        
+        clearInterval(timerIntervals[exerciseId]);
+        $exercise.data("time", 0);
+        updateDisplay($exercise, 0);
+      });
+
+      function updateDisplay($exercise, seconds) {
+        let minutes = Math.floor(seconds / 60);
+        let remainingSeconds = seconds % 60;
+        
+        $exercise.find(".minutes").text(minutes.toString().padStart(2, "0"));
+        $exercise.find(".seconds").text(remainingSeconds.toString().padStart(2, "0"));
+      }
+
+      // Celebrate Feature - Stars Moving in Random Directions
+      $(".celebrate-btn").click(function () {
+        const $exercise = $(this).closest(".exercise");
+
+        // Create 20 stars and animate them
+        for (let i = 0; i < 20; i++) {
+          const $star = $("<div class='star'></div>");
+          const randomX = Math.random() * 200 - 100; // Random horizontal movement
+          const randomY = Math.random() * 200 - 100; // Random vertical movement
+          const randomRotation = Math.random() * 360; // Random rotation angle
+
+          // Set custom properties for random movement using CSS variables
+          $star.css({
+            "--random-x": `${randomX}px`,
+            "--random-y": `${randomY}px`,
+            "--random-rotation": `${randomRotation}deg`,
+            left: "50%",
+            top: "50%",
+            animation: "star-move 2s forwards",
+          });
+
+          $exercise.append($star);
+          animateStar($star);
+        }
+      });
+
+      // Function to animate each star
+      function animateStar($star) {
+        $star.on("animationend", function () {
+          $star.remove(); // Remove the star after the animation ends
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

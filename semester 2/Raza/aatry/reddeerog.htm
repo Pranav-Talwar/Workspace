@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+  
+  body {
+    font-family: Arial, sans-serif;
+    border-radius: 2px;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    line-height: 1.6;
+  }
+
+.header1 {
+    background-color: #333;
+    color: rgb(255, 255, 255) ;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 6px solid  rgb(227, 65, 65);
+    
+    overflow: hidden;
+    margin-left : -6.65%;
+    margin-right: -6.65%;
+    top: 0;
+    
+  position: sticky;
+  z-index: 100;
+   }
+footer {
+    
+    text-align:right;
+    position: relative;
+    overflow: hidden;}
+ button {
+    padding: 10px 20px;
+    background-color: rgb(227, 65, 65);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    margin: 0 10px;
+    cursor:grab;
+    transition:  0.3s ease, transform 0.3s ease;
+  }
+   button:hover {
+    background-color: red;
+    transform: scale(1.2);;
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .about {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+   
+    color: black;
+    margin: 1%;
+  }
+  .about h2 {
+    font-size: 2em;
+    margin-top: 0;
+  }
+   article {
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  
+  .d {margin: 10%;
+  column-count: 2 ;}
+ .img1 {
+    width: 50%;
+  
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin: 3%;
+    margin-top: 10%;
+    
+  }
+.img1 img {
+    width: 100%;
+    
+    display: block;
+    
+    filter: grayscale(0.7);
+    transition: transform 0.5s ease;
+  }
+  .img1:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0) brightness(120%);
+
+    cursor: pointer;
+  }
+
+  .cards { width:30%; 
+  height: 200px;
+  display: flex;
+  gap: 5px;
+}
+.cards img{ 
+  width: 20%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 10px;
+  transition: all ease 0.3s;
+
+  
+}
+.cards img:hover{width: 100%;}
+
+
+
+   
+
+body {
+    width: 75%;
+    margin-left : 20%;
+    margin-right: 35%;
+}
+
+aside {
+    width: 15%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #333;
+}
+.button{
+        display: none; 
+    }
+
+aside>* {
+    padding: 0 2em;
+    
+}
+
+.ad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 8px solid  rgb(227, 65, 65);
+    width: 90%;
+    height: 100px;
+    margin: 1em auto;
+    padding: 0;
+}
+.aaa{width: 90%;}
+.ad1 {
+    float:inline-end;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 90%;
+    height: 100px;
+    margin: 1em auto;
+    padding: 0;
+    
+    
+}
+.img2{
+    float: left; 
+    margin-right: 20px; }
+  main .ad {
+    display: none;}
+    main .ad1 {
+    display: none;}
+
+
+@media  screen and (max-width: 600px) {
+    .header1{ text-align: center;
+      margin-left : -26.4%;
+      margin-right: -7.15%;
+        }
+    body {
+        text-align: center; 
+        
+    }
+
+    main .ad{
+        display: none; 
+    }
+    main .ad1{
+        display: none; 
+    }
+
+    .abc {
+        display: none; 
+    }
+
+    .abcd {
+        display: flex; 
+    }
+
+
+  
+    }
+    
+    @media  screen and (max-width: 600px) {
+    header{ text-align: center;
+    }
+     
+    .button{
+        display: block; 
+    }
+    .d{columns: 1;}
+    }
+
+
+
+
+   </style>
+ </head>
+
+ <body>
+    <header class="header1">
+        <h1>Product</h1>
+        <div class="button">
+       
+          <button onclick="location.href='../alberta/Main (1).html'"  class="r">Home Page</button>
+          <button onclick="location.href='#about'" class="q" >About</button>       
+          <button onclick="location.href='#gallery'" class="w" >Gallery</button>    
+          <button onclick="location.href='#events'" class="e">Events</button>       
+          
+        </div>
+    </header>
+
+     <aside class="abc">
+          <div class="ad1" > <img src="City_of_Red_Deer_Logo.svg.png" alt="a"  class="aaa"></div>
+            <div class="ad"> <button onclick="location.href='#about'" class="q" >About</button>         </div>
+            <div class="ad"><button onclick="location.href='#gallery'" class="w" >Gallery</button>      </div>
+            <div class="ad"><button onclick="location.href='#events'" class="e">Events</button>         </div>
+          </aside>
+
+      
+      
+         <div class="container">
+
+        <div class="about" id="about">
+          <section>
+
+          <header><h2>About Red Deer</h2></header>
+          <h4></h4>
+         </section></div>
+         
+      
+        <div class="img1">
+          <img src="Red_Deer_-_Aerial_-_downtown_bridges.jpg" alt="Edmonton Skyline">
+        </div>
+         </div>
+      
+
+      <article  class="d">
+       
+        <h4></h4> </article>
+
+<div class="map">
+
+          
+  <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d78112.8739937087!2d-113.89048926596432!3d52.27920612512442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5374542947119299%3A0x500a390441644b0!2sRed%20Deer%2C%20AB!5e0!3m2!1sen!2sca!4v1707621369574!5m2!1sen!2sca" width="350" height="350"  loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe></div>
+      
+    
+
+
+
+          
+     
+
+      
+      
+          <footer>
+           
+            Name- Pranav Talwar <br>Student ID- 000368374 <br> <a href="mailto:talwarpranav929@gmail.com">talwarpranav929@gmail</a> <br> 
+           
+          
+        </footer> </body>
+
+</html>

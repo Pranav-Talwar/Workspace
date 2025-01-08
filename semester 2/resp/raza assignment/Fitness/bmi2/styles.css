@@ -1,0 +1,262 @@
+/* Reset and Global Styles */
+/* Reset and Global Styles */
+* {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Ensure consistent box sizing across elements */
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif; /* Set the font to Arial for better readability */
+    color: #333; /* Set the default text color to a dark gray */
+    line-height: 1.6; /* Increase line height for better text readability */
+    overflow-x: hidden; /* Hide horizontal overflow to prevent unwanted scrollbars */
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    background-color: rgb(0, 0, 0); /* Set the background color to black */
+    padding: 15px 20px; /* Add padding for spacing around the navbar */
+    position: fixed; /* Fix the navbar at the top of the screen */
+    width: 100%; /* Make the navbar span the full width of the screen */
+    top: 0; /* Position the navbar at the top */
+    z-index: 100; /* Ensure the navbar is on top of other content */
+}
+
+/* Navigation Links Styling */
+.nav-links {
+    list-style-type: none; /* Remove default list styling */
+    display: flex; /* Use flexbox to align items horizontally */
+    justify-content: center; /* Center the navigation items */
+}
+
+/* Individual Navigation Item Styling */
+.nav-links li {
+    margin: 0 20px; /* Add space between each navigation item */
+}
+
+/* Navigation Button Styling */
+.nav-btn {
+    color: #fff2f2; /* Set the text color to a light pinkish shade */
+    text-decoration: none; /* Remove default underline from links */
+    font-size: 18px; /* Set font size */
+    font-weight: bold; /* Make the font bold */
+    padding: 10px 15px; /* Add padding for clickable area */
+    text-transform: uppercase; /* Make text uppercase */
+    border-radius: 5px; /* Round the corners of the button */
+    transition: all 0.3s ease; /* Add smooth transition for hover effect */
+}
+
+/* Hover Effect for Navigation Buttons */
+.nav-btn:hover {
+    color: #0ff; /* Change text color to cyan on hover */
+}
+
+/* Full Image Section Styling */
+.full-image {
+    position: relative; /* Position elements relative to this container */
+    width: 100%; /* Make the image span the full width of the screen */
+    height: 100%; /* Make the image cover the full height of the screen */
+}
+
+/* Image Styling */
+.full-img {
+    width: 100%; /* Ensure the image covers the full width */
+    height: 100%; /* Ensure the image covers the full height */
+    object-fit: cover; /* Maintain aspect ratio while covering the area */
+}
+
+/* Hero Text Styling */
+.hero-text {
+    position: absolute; /* Position the text absolutely within the full image container */
+    top: 40%; /* Position text 40% from the top */
+    left: 50%; /* Position text in the middle horizontally */
+    transform: translate(-50%, -50%); /* Center the text both horizontally and vertically */
+    color: darkblue; /* Set the text color to dark blue */
+    text-align: center; /* Center the text */
+    z-index: 10; /* Ensure the text appears on top of the image */
+    padding: 0 20px; /* Add padding for spacing */
+    width: 100%; /* Make the text container span the full width */
+}
+
+/* Hero Header Styling */
+.hero-text h1 {
+    font-size: 48px; /* Set the font size of the header */
+    margin-bottom: 10px; /* Add space below the header */
+}
+
+/* Hero Paragraph Styling */
+.hero-text p {
+    font-size: 24px; /* Set the font size for the paragraph */
+    line-height: 1.5; /* Increase line height for better readability */
+}
+
+/* Manual Section Styling */
+.manual-section {
+    display: flex; /* Use flexbox to arrange the text and image */
+    align-items: stretch; /* Stretch the items to fill the section */
+    justify-content: center; /* Center the items horizontally */
+    height: 100vh; /* Make the section fill the full height of the viewport */
+    padding: 0; /* Remove padding from the section */
+}
+
+/* Text Section Styling */
+.text-left, .image-right {
+    width: 50%; /* Divide the section into two equal parts */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+}
+
+/* Image Section Styling */
+.image-right{
+    margin-right: 5%; /* Add space to the right of the image */
+    margin-top: 5%; /* Add space above the image */
+}
+
+/* Text Section Styling */
+.text-left {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Add padding inside the text section */
+}
+
+/* Text Section Header Styling */
+.text-left h2 {
+    font-size: 36px; /* Set the header font size */
+    margin-bottom: 20px; /* Add space below the header */
+}
+
+/* Text Section Paragraph Styling */
+.text-left p {
+    font-size: 20px; /* Set the font size for the paragraph */
+    line-height: 1.5; /* Increase line height for readability */
+    margin-bottom: 20px; /* Add space below the paragraph */
+}
+
+/* Image Styling */
+.manual-img {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Round the corners of the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow to create depth */
+}
+
+/* BMI Form Styling */
+form {
+    display: flex; /* Use flexbox for form layout */
+    flex-direction: column; /* Stack form elements vertically */
+    gap: 15px; /* Add space between form elements */
+}
+
+/* Label Styling for Form Fields */
+form label {
+    font-size: 18px; /* Set font size for labels */
+    font-weight: bold; /* Make the labels bold */
+}
+
+/* Input Field Styling */
+form input {
+    padding: 10px; /* Add padding inside the input field */
+    border: 1px solid #ccc; /* Light gray border for the input */
+    border-radius: 5px; /* Rounded corners for input fields */
+}
+
+/* Button Styling */
+form button {
+    padding: 12px; /* Add padding inside the button */
+    font-size: 16px; /* Set font size for the button text */
+    color: white; /* Set text color to white */
+    background-color: rgb(0, 0, 0); /* Set background color to black */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Round the corners of the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Hover Effect for Button */
+form button:hover {
+    background-color: #0ff; /* Change background color to cyan on hover */
+}
+
+/* Result Section Styling */
+#result {
+    margin-top: 20px; /* Add space above the result section */
+    font-size: 20px; /* Set font size for the result */
+    font-weight: bold; /* Make the result text bold */
+    color: #333; /* Set the text color to dark gray */
+    opacity: 0; /* Initially hide the result */
+    transition: opacity 0.5s ease; /* Add fade-in transition for the result */
+}
+
+/* Background Color for Manual Section */
+.bg-color-1 {
+    background-color: rgb(246, 238, 228); /* Set background color for the manual section */
+    color: #333333; /* Set text color to dark gray */
+}
+
+  /* Existing styles remain unchanged */
+
+/* Container Design */
+.container { 
+    text-align: center; /* Center-align text inside the container */
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 30px; /* Inner spacing */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    width: 320px; /* Fixed width for the container */
+  }
+  
+  /* Header styling */
+  .container h1 {
+    margin-bottom: 20px; /* Space below the header */
+    font-size: 24px; /* Header font size */
+    color: #333; /* Dark gray text color */
+  }
+  
+  /* Label styling for input fields */
+  .container label {
+    display: block; /* Place each label on a new line */
+    margin-top: 10px; /* Space above the label */
+    font-size: 16px; /* Font size */
+    color: #333333; /* Gray text color */
+  }
+  
+  /* Input field styling */
+  .container input {
+    width: 100%; /* Full width of the container */
+    padding: 10px; /* Inner spacing */
+    margin-top: 5px; /* Space above the input */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Button styling */
+  .container button {
+    width: 100%; /* Full width of the container */
+    padding: 10px; /* Inner spacing */
+    margin-top: 15px; /* Space above the button */
+    background: linear-gradient(135deg, #8e0142, #45815c); /* Gradient background */
+    border: none; /* Remove default border */
+    color: #fff; /* White text color */
+    font-size: 16px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  /* Result section styling */
+  .container #result {
+    margin-top: 15px; /* Space above the result */
+    font-size: 18px; /* Font size */
+    color: #333; /* Dark gray text */
+    opacity: 0; /* Initially hidden */
+  }
+  
+  /* Hover Effects for Button */
+  .container button:hover {
+    background: linear-gradient(135deg, #45815c, #8e0142); /* Reversed gradient */
+  }
+  

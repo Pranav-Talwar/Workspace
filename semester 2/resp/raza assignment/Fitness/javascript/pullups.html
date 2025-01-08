@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Charset and viewport settings for proper character encoding and responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title for the webpage -->
+    <title>Pull-Ups</title>
+    <!-- External stylesheet link for navigation bar styling -->
+    <link rel="stylesheet" href="nav.css">
+
+    <style>
+        /* Basic styling for the body of the page */
+        body {
+            font-family: 'Arial', sans-serif; /* Setting a simple sans-serif font */
+            margin: 0; /* Removing default margin */
+            padding: 0; /* Removing default padding */
+            background-color: rgb(246, 238, 228); /* Light background color */
+            color: #333; /* Default text color */
+        }
+
+        /* Container styles for the whole content */
+        .container {
+            display: flex; /* Using flexbox for layout */
+            flex-direction: column; /* Stacking child elements vertically */
+            align-items: center; /* Centering child elements horizontally */
+            padding: 20px; /* Adding padding around the content */
+        }
+
+        /* Styles for the exercise section */
+        .exercise {
+            max-width: 1000px; /* Limiting the maximum width of the exercise card */
+            text-align: center; /* Centering text inside the card */
+            margin-bottom: 20px; /* Adding bottom margin between cards */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for the card */
+            border-radius: 10px; /* Rounded corners */
+            overflow: hidden; /* Hides any overflowing content */
+            background: white; /* White background for the card */
+        }
+
+        /* Styling for the exercise image */
+        .exercise img {
+            width: 100%; /* Make the image width fill the container */
+            height: auto; /* Ensure the image height adjusts proportionally */
+        }
+
+        /* Styling for the exercise title */
+        .exercise h3 {
+            margin: 0; /* Removing default margin */
+            padding: 10px; /* Adding padding around the title */
+            background-color: #007b7f; /* Dark teal background for the title */
+            color: white; /* White text color */
+        }
+
+        /* Styling for the paragraphs inside the exercise card */
+        .exercise p {
+            padding: 10px; /* Adding padding inside the paragraph */
+            color: #555; /* Dark gray text color for paragraphs */
+        }
+
+        /* Styling for the unordered lists inside the exercise card */
+        .exercise ul {
+            text-align: left; /* Aligning list items to the left */
+            padding: 20px; /* Adding padding inside the list */
+            color: #555; /* Dark gray text color for the list */
+        }
+
+        /* Styling for individual list items */
+        .exercise li {
+            margin-bottom: 10px; /* Adding space between list items */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation bar with links to other sections of the website -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="../fitnessapp/home.html" class="nav-btn">Home</a></li> <!-- Link to home page -->
+            <li><a href="../javascript/main.html" class="nav-btn">Workout Guide</a></li> <!-- Link to workout guide page -->
+            <li><a href="../bmi2/index.html" class="nav-btn">BMI App</a></li> <!-- Link to BMI app page -->
+        </ul>
+    </nav>
+
+    <!-- Main content container for the exercise details -->
+    <div class="container">
+        <!-- Exercise card for Pull-Ups -->
+        <div class="exercise">
+            <!-- Image for the Pull-Up exercise -->
+            <img src="pull-upM.jpg" alt="Pull-Ups"> <!-- Alternative text is provided for the image -->
+            <!-- Title of the exercise -->
+            <h3>Pull-Ups</h3>
+            <!-- Short description of the Pull-Ups exercise -->
+            <p>Pull-Ups are a challenging and effective exercise that targets the upper body, focusing on the back, shoulders, and arms.</p>
+            <!-- Bullet points listing the benefits of Pull-Ups -->
+            <ul>
+                <li>Builds strength in the lats, biceps, and shoulders.</li> <!-- Benefit: Strengthens the back, biceps, and shoulders -->
+                <li>Improves grip strength and overall upper body endurance.</li> <!-- Benefit: Improves grip and endurance -->
+                <li>Enhances functional strength for lifting and pulling movements.</li> <!-- Benefit: Improves strength for functional movements -->
+                <li>Engages core muscles to improve stability and posture.</li> <!-- Benefit: Engages the core for stability -->
+                <li>Can be adapted for progressive strength training with variations.</li> <!-- Benefit: Can be adjusted for different fitness levels -->
+            </ul>
+            <!-- Bullet points listing the steps to perform a Pull-Up -->
+            <ul>
+                <li><strong>Step 1:</strong> Stand below a pull-up bar and grip it with your palms facing away from you (overhand grip) and hands shoulder-width apart.</li> <!-- Step 1 -->
+                <li><strong>Step 2:</strong> Engage your core, and pull your shoulders back and down to start the movement.</li> <!-- Step 2 -->
+                <li><strong>Step 3:</strong> Pull yourself up until your chin is above the bar, keeping your body straight and controlled.</li> <!-- Step 3 -->
+                <li><strong>Step 4:</strong> Lower yourself back down slowly to the starting position, fully extending your arms.</li> <!-- Step 4 -->
+                <li><strong>Step 5:</strong> Perform 5-10 repetitions, depending on your fitness level, ensuring proper form.</li> <!-- Step 5 -->
+                <li><strong>Step 6:</strong> Rest briefly and repeat for 2-3 sets or as desired.</li> <!-- Step 6 -->
+            </ul>
+            <!-- Note for beginners on how to adapt the exercise -->
+            <p><strong>Note:</strong> If you are new to pull-ups, use an assisted pull-up machine, resistance bands, or perform negative pull-ups to build strength.</p>
+            <!-- Embedding a timer for use during exercise or rest -->
+            <iframe src="timer/index.html" width="100%" height="250px" style="border: none;"></iframe>
+        </div>
+    </div>
+
+</body>
+
+</html>

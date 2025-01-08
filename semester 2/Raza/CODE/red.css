@@ -1,0 +1,215 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;  
+    border-radius: 2px; 
+    padding: 0; /* Remove default padding */
+    background-color: white; 
+    color: black; 
+    line-height: 1.6;  
+}
+
+/* Header styles */
+.header1 {
+    background-color: #333;  
+    color: rgb(255, 255, 255); /* White text color */
+    padding: 10px 0;  
+    text-align: center; 
+    border-bottom: 6px solid rgb(227, 65, 65); /* Bottom border color */
+    
+    overflow: hidden; /* Clear floats */
+    margin-left: -6.65%;  
+    margin-right: -6.65%; 
+    top: 0; /* Stick to top of the viewport */
+    
+    position: sticky; 
+    z-index: 100; /* High z-index to stay on top */
+}
+
+/* Footer styles */
+footer {
+    text-align: right;  
+    position: relative; /* Relative positioning */
+    overflow: hidden; /* Clear floats */
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px; /* Button padding */
+    background-color: rgb(227, 65, 65);  
+    color: rgb(255, 255, 255); 
+    border: none; /* No border */
+    border-radius: 5px; 
+    font-size: 1em;  
+    margin: 0 10px; 
+    cursor: grab; /* Change cursor to grab */
+    transition: 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Button hover effects */
+button:hover {
+    background-color: red; /* Change background color on hover */
+    transform: scale(1.2); /* Scale up button on hover */
+}
+
+/* Main container styles */
+.container {
+    max-width: 1200px; /* Maximum width of the container */
+    margin: 0 auto; /* Center align container */
+    padding: 40px; /* Padding inside container */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between items */
+}
+
+/* About section styles */
+.about {
+    flex: 1; /* Allow this section to grow */
+    display: flex; /* Flexbox for alignment */
+    flex-flow: column nowrap; /* Column layout */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    color: black;  
+    margin: 1%; /* Margin for spacing */
+}
+
+/* Image container styles */
+.img1 {
+    width: 50%; /* Width of image container */
+    position: relative; /* Relative positioning for child elements */
+    z-index: 1; /* Stack order */
+    overflow: hidden; /* Hide overflow */
+    margin: 3%; /* Margin for spacing */
+    margin-top: 10%; /* Additional margin at the top */
+    background: transparent; }
+
+/* Image styles */
+.img1 img {
+    width: 100%; /* Full width of container */
+    display: block; /* Block display */
+    filter: grayscale(0.7); /* Grayscale filter */
+    transition: transform 0.5s ease; /* Smooth transformation on hover */
+}
+
+/* Image hover effects */
+.img1:hover img {
+    transform: scale(1.1); /* Scale up image on hover */
+    filter: grayscale(0) brightness(120%); /* Remove grayscale and brighten */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Additional body styles (overrides previous settings) */
+body {
+    width: 75%; /* Set width of body */
+    margin-left: 20%; 
+    margin-right: 35%;  
+}
+/* Sidebar styles */
+aside {
+    width: 15%; /* Width of sidebar */
+    height: 100%;  
+    position: fixed; 
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    background: #373636; /* Background color */
+}
+
+/* Sidebar child elements padding */
+aside > * {
+    padding: 0 2em; /* Padding for sidebar items */
+}
+
+
+.ad {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center items */
+    align-items: center; 
+    border-bottom: 8px solid rgb(227, 65, 65); 
+    width: 90%;  
+    height: 100px; /* Height of ad */
+    margin: 1em auto; /* Center align with margin */
+    padding: 0; 
+}
+
+.aaa {
+    width: 90%; /* Width of element with class aaa */
+}
+
+/* Additional ad styles */
+.ad1 {
+    float: inline-end; /* Floats to the end of the container */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center items */
+    align-items: center; /* Center items vertically */
+    
+    width: 90%; /* Width of ad */
+    height: 100px; /* Height of ad */
+    margin: 1em auto; /* Center align with margin */
+    padding: 0; /* No padding */
+}
+
+/* Image styles for ads */
+.img2 {
+    float: left; /* Float to the left */
+    margin-right: 20px; /* Margin on the right */
+}
+
+/* Main section advertisement visibility */
+main .ad {
+    display: none; /* Hide ads in main section */
+}
+
+main .ad1 {
+    display: none; /* Hide ads in main section */
+}
+
+/* Grid layout styles */
+.grid {
+    display: grid; /* Grid display */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Gap between grid items */
+}
+
+/* Card image styles */
+.card img {
+    max-width: 100%; /* Prevent image overflow */
+    height: auto; /* Maintain aspect ratio */
+    filter: brightness(130%); /* Brighten image */
+}
+
+/* Card styles */
+.card {
+    border: 1px solid #ccc; /* Optional border */
+    padding: 10px; /* Optional padding */
+    text-align: center; /* Center text */
+}
+
+/* Card hover effects */
+.card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* FAQ section styles */
+.faq {
+    padding: 20px; /* Padding for FAQ */
+    background-color: #f9f9f9; /* Light background */
+    border: 1px solid #ddd; /* Border around FAQ */
+    margin: 20px 0; /* Margin for spacing */
+}
+
+/* FAQ heading styles */
+.faq h2 {
+    margin-bottom: 15px; /* Margin below heading */
+}
+
+/* Question styles */
+.question {
+    font-weight: bold; /* Bold text for questions */
+    cursor: pointer; /* Change cursor to pointer */
+    margin-bottom: 5px; /* Margin below question */
+}
+
+/* Answer styles */
+.answer {
+    display: none; /* Hide answers initially */
+    margin-left: 15px; 
+    color: #555; 
+}

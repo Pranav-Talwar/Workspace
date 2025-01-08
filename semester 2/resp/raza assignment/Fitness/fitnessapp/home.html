@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Guide</title>
+  
+  <!-- Linking External CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul class="nav-links">
+      <!-- Navigation Links -->
+      <li><a href="../fitnessapp/home.html" class="nav-btn">Home</a></li>
+      <li><a href="../javascript/main.html" class="nav-btn">Workout Guide</a></li>
+      <li><a href="../bmi2/index.html" class="nav-btn">BMI App</a></li>
+    </ul>
+  </nav>
+
+  <!-- Full-Width Top Image Section with Mission Overlay -->
+  <section class="full-image">
+    <!-- Hero Text Overlay on Top of the Image -->
+    <div class="hero-text">
+      <br><br>
+      <h1>MY FITNESS COMPANION</h1>
+      <p>Your personalized fitness journey starts here, with guidance, motivation, and support every step of the way.</p>
+      <br><br><br>
+    </div>
+    <!-- Background Image -->
+    <img src="giphy (2).webp" alt="Fitness Image" class="full-img">
+  </section>
+
+  <!-- Section 1: Image Left, Text Right -->
+  <section class="manual-section" id="open">
+    <!-- Left Image Section -->
+    <div class="image-left">
+      <img src="content-3.jpg" alt="Workout" class="manual-img">
+    </div>
+    <!-- Right Text Section -->
+    <div class="text-right bg-color-1">
+      <p><b>Welcome to Your Fitness Companion</b> <br>
+      At Your Fitness Companion, we believe that every move counts and every milestone deserves to be celebrated. Our goal is to help you reach your fullest potential, from workouts to mindset, and beyond. We provide you with the tools, knowledge, and support to help you stay on track and achieve long-lasting results. <br>
+      Whether you're just starting your fitness journey or looking to take your training to the next level, we’re here to inspire, guide, and empower you.</p>
+    </div>
+  </section>
+  <audio id="sound" src="welcome-traveler-97167.mp3" preload="auto"></audio>
+
+  <!-- Section with Dynamic Text -->
+  <section class="manual-section">
+    <!-- Left Text Section with Links -->
+    <div class="text-left bg-color-1">
+      <ul class="values-list">
+        <li class="value">Our Values</li>
+        <!-- Links with Descriptions Shown Dynamically -->
+        <li><a href="#" class="value-link" data-text="Exercise doesn’t have to be a chore—find activities you enjoy and make fitness fun! The more you enjoy it, the easier it becomes to stay active and healthy">It’s healthier to have fun</a></li>
+        <li><a href="#" class="value-link" data-text="Your fitness journey is unique to you. It’s not about comparing yourself to others—focus on your progress, set your own goals, and become the best version of yourself.">Only you determine your best self</a></li>
+        <li><a href="#" class="value-link" data-text="Consistency is the key, and showing up—whether it’s for your own workout, or to support others—builds a strong community of motivation, dedication, and accountability.">Show up for yourself and others</a></li>
+        <li><a href="#" class="value-link" data-text="A positive and supportive fitness community helps everyone thrive. Embrace and encourage others, no matter where they are in their fitness journey.">Be welcoming to each other</a></li>
+        <li><a href="#" class="value-link" data-text="Always seek to learn more about your body and what works best for you. Experiment with different workouts, nutrition plans, and recovery methods to unlock your full potential.">Curiosity unlocks potential</a></li>
+      </ul>
+    </div>
+    <!-- Right Text Section for Dynamic Content -->
+    <div class="text-right bg-color-4">
+      <div id="dynamic-text">Exercise doesn’t have to be a chore—find activities you enjoy and make fitness fun! The more you enjoy it, the easier it becomes to stay active and healthy</div>
+    </div>
+  </section>
+
+  <!-- Section 2: Text Left, Image Right -->
+  <section class="manual-section">
+    <!-- Left Image Section -->
+    <div class="image-left">
+      <img src="content-2.jpg" alt="Healthy Living" class="manual-img">
+    </div>
+    <!-- Right Text Section -->
+    <div class="text-right bg-color-2">
+      <p><b>Our Story: Empowering Your Fitness Journey </b><br>
+      What began as a simple concept has evolved into a supportive community, driven by the passion to make fitness accessible, motivating, and sustainable. Our mission is to combine expert guidance, personalized training, and a wealth of knowledge to help you maintain a balanced and healthy lifestyle. <br> 
+      We believe wellness is more than just physical fitness—it's a holistic journey that includes mental strength, motivation, and the right support system. Join us as we inspire one another to reach new heights.</p>
+    </div>
+  </section>
+
+  <!-- Section 3: Image Left, Text Right -->
+  <section class="manual-section">
+    <!-- Left Text Section -->
+    <div class="text-left bg-color-3">
+      <p><b>Strength and Resilience</b> <br>
+      Our strength training programs are designed to help you build not just muscle, but also the resilience you need to push through obstacles in every aspect of your life. With expert-led exercises and tailored plans, we’ll guide you through a strength-building journey that leaves you feeling empowered. 
+      </p>
+    </div>
+    <!-- Right Image Section -->
+    <div class="image-right">
+      <img src="content-1.jpg" alt="Strength Training" class="manual-img">
+    </div>
+  </section>
+
+  <!-- Section 4: Image Left, Text Right -->
+  <section class="manual-section">
+    <!-- Left Image Section -->
+    <div class="image-left">
+      <img src="content-4.jpg" alt="Personalized Fitness" class="manual-img">
+    </div>
+    <!-- Right Text Section -->
+    <div class="text-right bg-color-2">
+      <p><b>Your Wellness, Your Way</b> <br>
+      We understand that every fitness journey is unique, and that’s why our plans are personalized to meet your specific goals and preferences. Whether you’re training for a marathon, building muscle, or just looking to feel more energized, our coaching and resources are designed to support your individual needs. <br> 
+      With access to expert-led advice, fitness programs, meal plans, and wellness tools, you’re equipped with everything you need to make sustainable, positive changes in your life.</p>
+    </div>
+  </section>
+
+  <!-- jQuery Library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- External JavaScript File -->
+  <script src="index.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Showcase</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: black;
+            line-height: 1.6;
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Header */
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        /* Navigation Menu */
+        nav {
+            background-color: #333;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            transform: translateX(-100%);
+            transition: transform 0.4s ease;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 20px 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        nav ul li a:hover {
+            color: rgb(227, 65, 65);
+        }
+
+        /* Toggle Navigation Button */
+        .menu-btn {
+            font-size: 2em;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            position: relative;
+            z-index: 101;
+        }
+
+        /* Container for main content */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* Product Gallery */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .grid .product-card {
+            background-color: whitesmoke;
+            padding: 20px;
+            border: 1px solid #ddd;
+            text-align: center;
+            position: relative;
+        }
+
+        .grid .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: opacity 0.3s ease;
+        }
+
+        .grid .product-card:hover img {
+            opacity: 0.7; /* Image fades out on hover */
+        }
+
+        .grid .product-card .description {
+            display: none;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            transition: opacity 0.3s ease;
+        }
+
+        /* FAQ Section */
+        .faq {
+            margin-top: 50px;
+        }
+
+        .faq h2 {
+            font-size: 2em;
+            text-align: center;
+        }
+
+        .faq .question {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+
+        .faq .answer {
+            display: none;
+            padding: 10px;
+            background-color: #eee;
+        }
+
+        /* Footer */
+        footer {
+            text-align: right;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>Product Showcase</h1>
+        <button class="menu-btn">&#9776;</button>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav id="menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main container -->
+    <div id="home" class="container">
+        <!-- Product Gallery -->
+        <section id="products" class="grid">
+            <div class="product-card">
+                <img src="12.png" alt="Product 1">
+                <div class="description">Description for Product 1</div>
+            </div>
+            <div class="product-card">
+                <img src="12.png" alt="Product 2">
+                <div class="description">Description for Product 2</div>
+            </div>
+            <div class="product-card">
+                <img src="12.png" alt="Product 3">
+                <div class="description">Description for Product 3</div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="question">What is the return policy?</div>
+            <div class="answer">We offer a 30-day return policy on all products.</div>
+
+            <div class="question">Do you offer international shipping?</div>
+            <div class="answer">Yes, we ship internationally to most countries.</div>
+
+            <div class="question">How can I track my order?</div>
+            <div class="answer">Once your order is shipped, you will receive a tracking number via email.</div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Product Showcase. All rights reserved.</p>
+    </footer>
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Toggle navigation menu visibility
+            $(".menu-btn").on("click", function() {
+                $("#menu").toggleClass("active");
+                if ($("#menu").hasClass("active")) {
+                    $("#menu").css("transform", "translateX(0)");
+                } else {
+                    $("#menu").css("transform", "translateX(-100%)");
+                }
+            });
+
+            // Smooth scroll for navigation links
+            $("nav ul li a").on("click", function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $("html, body").animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, 'swing');
+                }
+            });
+
+            // Fade in description on hover
+            $(".product-card").hover(function() {
+                $(this).find(".description").stop(true, true).fadeIn(300);
+            }, function() {
+                $(this).find(".description").stop(true, true).fadeOut(300);
+            });
+
+            // FAQ section: slideToggle for showing/hiding answers
+            $(".question").on("click", function() {
+                $(this).next(".answer").slideToggle(500, "swing");
+            });
+
+            // Custom animation: Resize an image on click
+            $(".product-card img").on("click", function() {
+                $(this).animate({
+                    width: "150%", // Custom animation resizing
+                    height: "150%"
+                }, 500, "easeInOut", function() {
+                    $(this).animate({
+                        width: "100%",
+                        height: "100%"
+                    }, 500, "easeInOut");
+                });
+            });
+        });
+    </script>
+</body>
+</html>

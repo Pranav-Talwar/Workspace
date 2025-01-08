@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testing Table</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    .pass {
+      color: green;
+    }
+    .fail {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Testing Table</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Test Case</th>
+        <th>Component/Feature</th>
+        <th>Test Steps</th>
+        <th>Expected Result</th>
+        <th>Actual Outcome</th>
+        <th>Pass/Fail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Navigation Bar Hover Color Change</td>
+        <td>1. Hover over each link in the navigation bar.</td>
+        <td>The color of the links in the navigation bar should change when hovered.</td>
+        <td>The color of the navigation links changes to the defined hover color on hover.</td>
+        <td class="pass">Pass</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Smooth Scroll on "Learn More" Button</td>
+        <td>1. Click the "Learn More" button in the hero section.</td>
+        <td>The page should smoothly scroll to the next section, without jumping.</td>
+        <td>The page smoothly scrolls to the next section as expected.</td>
+        <td class="pass">Pass</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Our Values Text Change on Click</td>
+        <td>1. Click on any of the "Our Values" links.</td>
+        <td>The text in the #dynamic-text container should change according to the selected value.</td>
+        <td>The text in the #dynamic-text container updates with the corresponding text for the selected value.</td>
+        <td class="pass">Pass</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>"Learn More" Button Hover Color Change</td>
+        <td>1. Hover over the "Learn More" button.</td>
+        <td>The color of the button should change on hover, typically as per the hover effect styles defined in CSS.</td>
+        <td>The button color changes on hover, switching to the defined hover color.</td>
+        <td class="pass">Pass</td>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>Test hover effect on workout card</td>
+        <td>
+            1. Hover over any workout card (e.g., Strength Training).<br>
+            2. Observe the hover effect.
+        </td>
+        <td>The card should lift (with a shadow) and move upwards (transform effect).</td>
+        <td>Card lifted, shadow appeared, and card moved upwards.</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Test PDF download link for "Workout Plan PDF"</td>
+        <td>
+            1. Click on the "Workout Plan PDF" download link.<br>
+            2. Observe if the PDF starts downloading.
+        </td>
+        <td>The PDF file should start downloading.</td>
+        <td>PDF file started downloading as expected.</td>
+        <td>Pass</td>
+    </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

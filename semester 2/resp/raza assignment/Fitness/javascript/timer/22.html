@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Pride Confetti</title>
+    <!-- Include the confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        #confettiButton {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #004d99; /* School color */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        #confettiButton:hover {
+            background-color: #003366;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <button id="confettiButton">Celebrate School Pride!</button>
+
+    <script>
+        // Function to trigger confetti bursts from both sides
+        function launchConfetti() {
+            // Burst from the left side
+            confetti({
+                particleCount: 60,
+                startVelocity: 100,
+                spread: 100,
+                origin: { x: 0, y: 1 }, // Left side
+                colors: ["#004d99", "#ffcc00", "#ff0000"] // School colors
+            });
+
+            // Burst from the right side
+            confetti({
+                particleCount: 100,
+                startVelocity: 100,
+                spread: 100,
+                origin: { x: 1, y: 1 }, // Right side
+                colors: ["#004d99", "#ffcc00", "#ff0000"] // School colors
+            });
+        }
+
+        // Add event listener to the button
+        document.getElementById("confettiButton").addEventListener("click", () => {
+            // Trigger bursts over a period of 3 seconds
+            const interval = setInterval(() => {
+                launchConfetti();
+            }, 300); // Bursts every 300ms
+
+            // Stop after 3 seconds
+            setTimeout(() => clearInterval(interval), 3000);
+        });
+    </script>
+</body>
+</html>

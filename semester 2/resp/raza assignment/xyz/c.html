@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration and Login Testing Plan</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>User Registration and Login Testing Plan</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Test Case</th>
+                <th>Test Data</th>
+                <th>Expected Result</th>
+                <th>Actual Result</th>
+                <th>Pass/Fail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1. User Registration with Valid Data</td>
+                <td>
+                    <ul>
+                        <li>First Name: Rahul</li>
+                        <li>Last Name: Sharma</li>
+                        <li>Email: rahul.sharma123@example.com</li>
+                        <li>Username: rahulsharma321</li>
+                        <li>Password: EasyPass321</li>
+                        <li>Confirm Password: EasyPass321</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>All fields are filled correctly.</li>
+                        <li>Password meets security requirements.</li>
+                        <li>Registration is successful with a success message.</li>
+                        <li>User is redirected to the login page.</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The form accepts the valid input data.</li>
+                        <li>The user is successfully registered.</li>
+                        <li>The success message "Registration successful" appears, and the user is redirected to the login page.</li>
+                    </ul>
+                </td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>2. User Registration with Empty Fields</td>
+                <td>
+                    <ul>
+                        <li>First Name: (Empty)</li>
+                        <li>Last Name: Sharma</li>
+                        <li>Email: rahul.sharma123@example.com</li>
+                        <li>Username: rahulsharma321</li>
+                        <li>Password: EasyPass321</li>
+                        <li>Confirm Password: EasyPass321</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Validation message: "All fields are required. Please fill in all the details."</li>
+                        <li>Registration is not processed until all required fields are filled.</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The error message "All fields are required. Please fill in all the details." appears for the missing First Name.</li>
+                        <li>Registration is not processed until the First Name is entered.</li>
+                    </ul>
+                </td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>3. User Registration with Mismatched Passwords</td>
+                <td>
+                    <ul>
+                        <li>First Name: Rahul</li>
+                        <li>Last Name: Sharma</li>
+                        <li>Email: rahul.sharma123@example.com</li>
+                        <li>Username: rahulsharma321</li>
+                        <li>Password: EasyPass321</li>
+                        <li>Confirm Password: EasyPass123</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Validation message: "Passwords do not match. Please re-enter."</li>
+                        <li>Registration is not processed until the passwords match.</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The error message "Passwords do not match. Please re-enter." appears when the passwords don't match.</li>
+                        <li>Registration is not processed until the passwords match.</li>
+                    </ul>
+                </td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>4. User Registration with Short Password</td>
+                <td>
+                    <ul>
+                        <li>First Name: Rahul</li>
+                        <li>Last Name: Sharma</li>
+                        <li>Email: rahul.sharma123@example.com</li>
+                        <li>Username: rahulsharma321</li>
+                        <li>Password: Easy1</li>
+                        <li>Confirm Password: Easy1</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Validation message: "Password must be at least 8 characters long."</li>
+                        <li>Registration is not processed until the password meets the length requirement.</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The error message "Password must be at least 8 characters long." appears when the password is too short.</li>
+                        <li>Registration is not processed until the password length is corrected.</li>
+                    </ul>
+                </td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>5. User Registration with Duplicate Username</td>
+                <td>
+                    <ul>
+                        <li>First Name: Rahul</li>
+                        <li>Last Name: Sharma</li>
+                        <li>Email: rahul.sharma123@example.com</li>
+                        <li>Username: rahulsharma321 (Assume already exists)</li>
+                        <li>Password: EasyPass321</li>
+                        <li>Confirm Password: EasyPass321</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Validation message: "The username is already in use. Please choose a different one."</li>
+                        <li>Registration is not processed until a unique username is provided.</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The error message "The username is already in use. Please choose a different one." appears.</li>
+                        <li>Registration is not processed until a unique username is provided.</li>
+                    </ul>
+                </td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>6. User Login with Valid Credentials</td>
+                <td>
+                    <ul>
+                        <li>Username: rahulsharma321</li>
+                        <li>Password: EasyPass321</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The username and password are validated against the database.</li>
+                        <li>Success message appears: "Login successful!"</li>
+                        <li>User is redirected to the main application form.</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The username and password are validated successfully.</li>
+                        <li>The success message "Login successful!" appears, and the user is redirected to the main application.</li>
+                    </ul>
+                </td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>7. User Login with Invalid Username</td>
+                <td>
+                    <ul>
+                        <li>Username: rahulsharma999</li>
+                        <li>Password: EasyPass321</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Error message: "Invalid username or password."</li>
+                        <li>Login is not processed.</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The error message "Invalid username or password." appears.</li>
+                        <li>The login attempt fails.</li>
+                    </ul>
+                </td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>8. User Login with Invalid Password</td>
+                <td>
+                    <ul>
+                        <li>Username: rahulsharma321</li>
+                        <li>Password: WrongPass123</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Error message: "Invalid username or password."</li>
+                        <li>Login is not processed.</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The error message "Invalid username or password." appears.</li>
+                        <li>The login attempt fails.</li>
+                    </ul>
+                </td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>9. User Navigation Between Registration and Login</td>
+                <td>
+                    <ul>
+                        <li>After successful registration, click on the "Login" button.</li>
+                        <li>After entering invalid credentials on the login form, click on the "Register" button.</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Upon clicking the "Login" button on the registration form:</li>
+                        <ul>
+                            <li>The user is redirected to the login page.</li>
+                            <li>The registration form is hidden, and the login form is displayed.</li>
+                        </ul>
+                        <li>Upon clicking the "Register" button on the login form:</li>
+                        <ul>
+                            <li>The user is redirected to the registration page.</li>
+                            <li>The login form is hidden, and the registration form is displayed.</li>
+                        </ul>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>After registration, clicking "Login" redirected the user to the login form successfully.</li>
+                        <li>The registration form was hidden, and the login form was displayed as expected.</li>
+                        <li>After entering invalid credentials on the login form, clicking "Register" redirected the user to the registration form successfully.</li>
+                        <li>The login form was hidden, and the registration form was displayed as expected.</li>
+                    </ul>
+                </td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>10. Navigate to Home Section</td>
+                <td>
+                    <ul>
+                        <li>Button Clicked: Home</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The Home section (userControl1) is displayed.</li>
+                        <li>The Cart section (userControl2) and Account section (userControl3) are hidden.</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The Home section is displayed correctly.</li>
+                        <li>The Cart and Account sections are hidden as expected.</li>
+                    </ul>
+                </td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>11. Navigate to Cart Section</td>
+                <td>
+                    <ul>
+                        <li>Button Clicked: Cart</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The Cart section (userControl2) is displayed.</li>
+                        <li>The Home section (userControl1) and Account section (userControl3) are hidden.</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The Cart section is displayed correctly.</li>
+                        <li>The Home and Account sections are hidden as expected.</li>
+                    </ul>
+                </td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>12. Navigate to Account Section</td>
+                <td>
+                    <ul>
+                        <li>Button Clicked: Account</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The Account section (userControl3) is displayed.</li>
+                        <li>The Home section (userControl1) and Cart section (userControl2) are hidden.</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The Account section is displayed correctly.</li>
+                        <li>The Home and Cart sections are hidden as expected.</li>
+                    </ul>
+                </td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>13. Verify Default View on Application Load</td>
+                <td>
+                    <ul>
+                        <li>Action: Application launch</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The Home section (userControl1) is displayed by default.</li>
+                        <li>The Cart section (userControl2) and Account section (userControl3) are hidden.</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The Home section is displayed as the default view.</li>
+                        <li>The Cart and Account sections are hidden as expected.</li>
+                    </ul>
+                </td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>14. Add Item to Cart</td>
+                <td>Click "Add" button for "Pizza".</td>
+                <td>The quantity of "Pizza" increases by 1 in the cart, and the UI updates accordingly.</td>
+                <td>The "Pizza" quantity was successfully incremented by 1, and the updated value was displayed on the UI.</td>
+                <td>Passed</td>
+            </tr>
+            <tr>
+                <td>15. Remove Item from Cart</td>
+                <td>Click "Remove" button for "Burger" with the current quantity of 2.</td>
+                <td>The quantity of "Burger" decreases by 1, and the UI reflects the change.</td>
+                <td>The "Burger" quantity was correctly decremented to 1, and the change was displayed on the UI.</td>
+                <td>Passed</td>
+            </tr>
+            <tr>
+                <td>16. Prevent Negative Quantity</td>
+                <td>Click "Remove" button for "Fries" when the current quantity is 0.</td>
+                <td>The quantity of "Fries" remains at 0, with no change in the UI.</td>
+                <td>The system prevented the quantity from going below 0, and no UI changes occurred.</td>
+                <td>Passed</td>
+            </tr>
+            <tr>
+                <td>17. Reset Menu Items</td>
+                <td>Call the `ResetMenuItems()` method.</td>
+                <td>All menu item quantities reset to 0, and the UI updates to reflect this.</td>
+                <td>All quantities were successfully reset to 0, and the UI displayed the updated values.</td>
+                <td>Passed</td>
+            </tr>
+            <tr>
+                <td>18. Update Cart in UserControl2</td>
+                <td>Update the cart with 3 "Sandwiches" and 2 "Smoothies".</td>
+                <td>The cart displays the correct quantities, and the subtotal and total are recalculated.</td>
+                <td>The cart displayed 3 "Sandwiches" and 2 "Smoothies" as expected, with correctly recalculated totals.</td>
+                <td>Passed</td>
+            </tr>
+            <tr>
+                <td>19. Calculate Total with Taxes and Discount</td>
+                <td>Cart items include 2 "Pizza" and 1 "Cheesecake", and a coupon discount of $5.</td>
+                <td>The subtotal, taxes, and total are correctly calculated with the discount applied.</td>
+                <td>The calculations were accurate: subtotal, taxes, and total were displayed correctly with the $5 discount.</td>
+                <td>Passed</td>
+            </tr>
+            <tr>
+                <td>20. Complete Order</td>
+                <td>Click the "Complete Order" button after adding items to the cart.</td>
+                <td>The cart is cleared, totals reset, and a confirmation message is displayed.</td>
+                <td>The cart was cleared successfully, totals reset, and the confirmation message appeared as expected.</td>
+                <td>Passed</td>
+            </tr>
+            <tr>
+                <td>21. Display Cart Items in UI</td>
+                <td>Add 1 "Fries" and 2 "Smoothies" to the cart.</td>
+                <td>The UI displays "Fries (x1)" and "Smoothies (x2)" with the corresponding prices.</td>
+                <td>The UI correctly displayed "Fries (x1)" and "Smoothies (x2)" with accurate prices.</td>
+                <td>Passed</td>
+            </tr>
+            <tr>
+                <td>22. Load Default View</td>
+                <td>
+                  <ul>
+                    <li>Open the application</li>
+                    <li>Navigate to UserControl3</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>UserControl4 (Personal Details form) is visible</li>
+                    <li>UserControl5 (Change Password form) is hidden</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>UserControl4 was displayed as expected</li>
+                    <li>UserControl5 was hidden</li>
+                  </ul>
+                </td>
+                <td>Pass </td>
+              </tr>
+              <tr>
+                <td>23. Change to "Change Password" View</td>
+                <td>
+                  <ul>
+                    <li>Click the "Change Password" button</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>UserControl5 (Change Password form) is visible</li>
+                    <li>UserControl4 (Personal Details form) is hidden</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>UserControl5 was successfully displayed</li>
+                    <li>UserControl4 was hidden</li>
+                  </ul>
+                </td>
+                <td>Pass </td>
+              </tr>
+              <tr>
+                <td>24. Change to "Personal Details" View</td>
+                <td>
+                  <ul>
+                    <li>Click the "Change Personal Details" button after switching to the "Change Password" view</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>UserControl4 (Personal Details form) is visible again</li>
+                    <li>UserControl5 (Change Password form) is hidden</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>UserControl4 was successfully displayed again</li>
+                    <li>UserControl5 was hidden</li>
+                  </ul>
+                </td>
+                <td>Pass <td>
+              </tr>
+              <tr>
+                <td>25. Validate Input Fields</td>
+                <td>
+                    <ul>
+                        <li>Leave the "Current Password" or "New Password" fields empty.</li>
+                        <li>Click the "Update Details" button.</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>A message box should appear with the message "All fields are required."</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>A message box appeared with the message "All fields are required" when any required field was left empty.</li>
+                    </ul>
+                </td>
+                <td>Passed</td>
+            </tr>
+            <tr>
+                <td>26. New Password Length Validation</td>
+                <td>
+                    <ul>
+                        <li>Enter a new password with fewer than 8 characters.</li>
+                        <li>Enter a valid "Current Password."</li>
+                        <li>Click "Update Details."</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>A message box should appear with the message "Password must be at least 8 characters long."</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>A message box appeared with the message "Password must be at least 8 characters long" when the new password was shorter than 8 characters.</li>
+                    </ul>
+                </td>
+                <td>Passed</td>
+            </tr>
+            <tr>
+                <td>27. Successful Update of User Details</td>
+                <td>
+                    <ul>
+                        <li>Enter valid "First Name," "Last Name," and "Email" values.</li>
+                        <li>Enter the correct "Username" and "Password."</li>
+                        <li>Click "Update Details."</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The user's details should be updated in the database.</li>
+                        <li>A success message "Details updated successfully!" should appear.</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The details were updated successfully in the database.</li>
+                        <li>The success message "Details updated successfully!" appeared.</li>
+                    </ul>
+                </td>
+                <td>Passed</td>
+            </tr>
+            <tr>
+                <td>28. Successful Password Update</td>
+                <td>
+                    <ul>
+                        <li>Enter a valid "Current Password."</li>
+                        <li>Enter a "New Password" with at least 8 characters.</li>
+                        <li>Enter the correct "Username."</li>
+                        <li>Click "Update Details."</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The password should be successfully updated in the database.</li>
+                        <li>A success message "Password updated successfully!" should appear.</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The password was updated successfully in the database.</li>
+                        <li>The success message appeared.</li>
+                    </ul>
+                </td>
+                <td>Passed</td>
+            </tr>
+            <tr>
+                <td>29. Incorrect Username or Password</td>
+                <td>
+                    <ul>
+                        <li>Enter a valid "New Password" with at least 8 characters.</li>
+                        <li>Provide an incorrect "Current Password" or "Username."</li>
+                        <li>Click "Update Details."</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>A message box should appear with the message "Invalid current username or password."</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The message "Invalid current username or password" appeared when incorrect credentials were provided.</li>
+                    </ul>
+                </td>
+                <td>Passed</td>
+            </tr>
+            <tr>
+                <td>30. Database Connection Error Handling</td>
+                <td>
+                    <ul>
+                        <li>Simulate a database connection failure (e.g., disconnect the database or use an incorrect connection string).</li>
+                        <li>Attempt to update the password.</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>A message box should appear displaying the error message, such as "Database Error: [error details]."</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The error message "Database Error: [error details]" appeared when a connection issue occurred.</li>
+                    </ul>
+                </td>
+                <td>Passed</td>
+            </tr>
+            <tr>
+                <td>31. Unexpected Error Handling</td>
+                <td>
+                    <ul>
+                        <li>Simulate an unexpected error (e.g., programmatic issues, invalid data types).</li>
+                        <li>Attempt to update the password.</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>A message box should appear displaying "Unexpected Error: [error details]."</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>The message "Unexpected Error: [error details]" appeared for unexpected errors.</li>
+                    </ul>
+                </td>
+                <td>Passed</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

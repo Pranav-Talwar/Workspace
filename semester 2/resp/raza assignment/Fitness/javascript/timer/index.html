@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
+    <title>Timer</title>
+
+    <!-- Linking external CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main container for the timer application -->
+    <div id="container">
+        <!-- Section to display the current timer value -->
+        <div id="display">00:00</div>
+
+        <!-- Buttons to select predefined timer durations -->
+        <div id="timeButtons">
+            <!-- Button to start a 30-second timer -->
+            <button onclick="startTimer(30)">30 sec</button>
+            <!-- Button to start a 1-minute timer -->
+            <button onclick="startTimer(60)">1 min</button>
+            <!-- Button to start a 2-minute timer -->
+            <button onclick="startTimer(120)">2 min</button>
+        </div>
+        <!-- Buttons for controlling the timer (visible only after starting the timer) -->
+        <div id="controlButtons" style="display: none;">
+            <!-- Button to pause the current timer -->
+            <button id="pauseBtn" onclick="pauseTimer()">Pause</button>
+            <!-- Button to reset the timer to its initial state -->
+            <button onclick="resetTimer()">Reset</button>
+            <!-- Button to add an additional 30 seconds to the current timer -->
+            <button onclick="addThirtySeconds()">+30s</button>
+        </div>
+    </div>
+`   <div id="setSystem">
+    <div class="box1">sets</div>
+    <div class="box" id="1">1</div>
+    <div class="box" id="2">2</div>
+    <div class="box" id="3">3</div>
+    <div class="box" id="4">4</div>
+    <div class="box" id="5">5</div>
+    </div>
+    <!-- Hidden audio element for playing a beep sound when the timer ends -->
+    <!-- Replace 'short-beep-tone-47916.mp3' with the path to your audio file -->
+    <audio id="endSound" src="short-beep-tone-47916.mp3"></audio>
+
+    <!-- Importing the jQuery library for additional functionality -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Linking external JavaScript file for timer logic -->
+    <script src="script.js"></script>
+</body>
+</html>

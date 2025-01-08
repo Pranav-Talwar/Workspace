@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <style>
+    /* CSS */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      width: 320px;
+      transform: perspective(800px) rotateX(15deg) rotateY(-10deg);
+      animation: float 3s ease-in-out infinite;
+      transition: transform 0.2s;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      background: linear-gradient(135deg, #ff4e50, #f9d423);
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    #result {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #333;
+      transform: scale(0.9);
+      opacity: 0;
+      animation: showResult 0.5s ease forwards;
+    }
+
+    /* Keyframes */
+    @keyframes float {
+      0%, 100% {
+        transform: perspective(800px) rotateX(15deg) rotateY(-10deg) translateY(0);
+      }
+      50% {
+        transform: perspective(800px) rotateX(15deg) rotateY(-10deg) translateY(-10px);
+      }
+    }
+
+    @keyframes showResult {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>BMI Calculator</h1>
+    <form id="bmiForm">
+      <label for="weight">Weight (kg):</label>
+      <input type="number" id="weight" required>
+
+      <label for="height">Height (cm):</label>
+      <input type="number" id="height" required>
+
+      <button type="button" id="calculateBtn">Calculate BMI</button>
+    </form>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    // JavaScript with jQuery
+    $(document).ready(function() {
+      $('#calculateBtn').click(function() {
+        const weight = parseFloat($('#weight').val());
+        const height = parseFloat($('#height').val()) / 100;
+
+        if (isNaN(weight) || isNaN(height) || height <= 0 || weight <= 0) {
+          $('#result').text("Please enter valid values for weight and height.");
+          return;
+        }
+
+        const bmi = weight / (height * height);
+        let category = "";
+
+        if (bmi <= 18.4) {
+          category = "Underweight";
+        } else if (bmi <= 24.9) {
+          category = "Normal weight";
+        } else if (bmi <= 39.9) {
+          category = "Overweight";
+        } else {
+          category = "Obese";
+        }
+
+        $('#result').text("Your BMI is: " + bmi.toFixed(2) + " (" + category + ")");
+      });
+    });
+  </script>
+</body>
+</html>

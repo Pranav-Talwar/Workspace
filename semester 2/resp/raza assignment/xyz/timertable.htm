@@ -1,0 +1,168 @@
+<table border="1">
+    <thead>
+      <tr>
+        <th><strong>Test Case</strong></th>
+        <th><strong>Objective</strong></th>
+        <th><strong>Test Scenarios</strong></th>
+        <th><strong>Expected Outcome</strong></th>
+        <th><strong>Actual Outcome</strong></th>
+        <th><strong>Status</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1. Timer Start</strong></td>
+        <td>To verify that the timer starts correctly with different inputs.</td>
+        <td>
+          <ul>
+            <li>Click on "30 sec" button.</li>
+            <li>Click on "1 min" button.</li>
+            <li>Click on "2 min" button.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>The timer starts counting down from the selected time (30 sec, 1 min, or 2 min).</li>
+            <li>Timer display updates in real-time.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Timer started successfully with all selected time intervals.</li>
+            <li>Display updated accurately in real-time.</li>
+          </ul>
+        </td>
+        <td><strong>Passed</strong></td>
+      </tr>
+      <tr>
+        <td><strong>2. Timer Pause/Resume</strong></td>
+        <td>To confirm the pause and resume functionality of the timer.</td>
+        <td>
+          <ul>
+            <li>Start the timer with "30 sec".</li>
+            <li>Click "Pause" button.</li>
+            <li>Click "Resume" button.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Timer pauses when the "Pause" button is clicked.</li>
+            <li>Timer resumes when the "Resume" button is clicked.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Timer paused when "Pause" clicked.</li>
+            <li>Timer resumed correctly when "Resume" clicked.</li>
+          </ul>
+        </td>
+        <td><strong>Passed</strong></td>
+      </tr>
+      <tr>
+        <td><strong>3. Timer Reset</strong></td>
+        <td>To ensure the reset functionality works as expected.</td>
+        <td>
+          <ul>
+            <li>Start the timer with "30 sec".</li>
+            <li>Click "Pause" button.</li>
+            <li>Click "Reset" button.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Timer resets to 00:00.</li>
+            <li>Display returns to initial state.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Timer reset to 00:00 as expected.</li>
+            <li>Display returned to initial state after reset.</li>
+          </ul>
+        </td>
+        <td><strong>Passed</strong></td>
+      </tr>
+      <tr>
+        <td><strong>4. Timer Add 30s</strong></td>
+        <td>To verify that the "+30s" button adds 30 seconds to the timer.</td>
+        <td>
+          <ul>
+            <li>Start the timer with "1 min".</li>
+            <li>Click the "+30s" button during countdown.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Timer should increase by 30 seconds.</li>
+            <li>Timer display updates accordingly.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Timer added 30 seconds as expected.</li>
+            <li>Display updated correctly after clicking "+30s" button.</li>
+          </ul>
+        </td>
+        <td><strong>Passed</strong></td>
+      </tr>
+      <tr>
+        <td><strong>5. Timer End Sound</strong></td>
+        <td>To check if the end sound plays when the timer finishes.</td>
+        <td>
+          <ul>
+            <li>Start the timer with "30 sec".</li>
+            <li>Wait for the timer to reach 00:00.</li>
+          </ul>
+        </td>
+        <td>The sound should play when the timer reaches 00:00.</td>
+        <td>The sound played correctly when timer reached 00:00.</td>
+        <td><strong>Passed</strong></td>
+      </tr>
+      <tr>
+        <td><strong>6. Timer Hover Animation</strong></td>
+        <td>To ensure button hover effects work as intended.</td>
+        <td>
+          <ul>
+            <li>Hover over the "30 sec", "1 min", and "2 min" buttons.</li>
+            <li>Hover over the control buttons.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Background color changes on hover.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Background color changed on hover.</li>
+          </ul>
+        </td>
+        <td><strong>Passed</strong></td>
+      </tr>
+      <tr>
+        <td><strong>7. Button Visibility Toggle</strong></td>
+        <td>To verify that time selection buttons hide and control buttons show when the timer starts, and vice versa on reset.</td>
+        <td>
+          <ul>
+            <li>Click "30 sec", "1 min", or "2 min" buttons to start the timer.</li>
+            <li>Click "Reset" button after starting.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Time selection buttons hide, and control buttons show when the timer starts.</li>
+            <li>Control buttons hide, and time selection buttons reappear on reset.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Buttons toggled correctly:</li>
+            <li>Time selection buttons hid when the timer started.</li>
+            <li>Reappeared on reset.</li>
+          </ul>
+        </td>
+        <td><strong>Passed</strong></td>
+      </tr>
+    </tbody>
+  </table>
+  

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <style>
+    /* CSS */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #212020, hsl(30, 80%, 42%));
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      width: 320px;
+      position: relative; /* Enable floating animation */
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-size: 16px;
+      color: #333333;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      background: linear-gradient(135deg, #8e0142, #45815c);
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #333;
+      opacity: 0; /* Initially hidden */
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>BMI Calculator</h1>
+    <form id="bmiForm">
+      <label for="weight">Weight (kg):</label>
+      <input type="number" id="weight" required>
+
+      <label for="height">Height (cm):</label>
+      <input type="number" id="height" required>
+
+      <button type="button" id="calculateBtn">Calculate BMI</button>
+    </form>
+    <p id="result"></p>
+  </div>
+
+  <script>
+     $(document).ready(function() {
+      // Floating effect by adjusting the 'top' CSS property
+      function floatEffect() {
+        $('.container').animate({ top: '-=10px' }, 1200)
+          .animate({ top: '+=10px' }, 1200, floatEffect);
+        
+      }
+
+      // Initialize floating effect
+      floatEffect();
+
+      // Button hover effect
+      $('#calculateBtn').hover(
+        function() {
+          $(this).animate({ fontSize: '18px' }, 200); // Slightly enlarge font
+        },
+        function() {
+          $(this).animate({ fontSize: '16px' }, 200); // Reset font size
+        }
+      );
+
+      // Calculate BMI on button click
+      $('#calculateBtn').click(function() {
+        const weight = parseFloat($('#weight').val());
+        const height = parseFloat($('#height').val()) / 100;
+
+        const resultElement = document.getElementById("result");
+
+        if (isNaN(weight) || isNaN(height) || height <= 0 || weight <= 0) {
+          resultElement.textContent = "Please enter valid values for weight and height.";
+          resultElement.style.opacity = 1;
+          return;
+        }
+
+        const bmi = weight / (height * height);
+        let category = "";
+
+        if (bmi <= 18.4) {
+          category = "Underweight";
+        } else if (bmi <= 24.9) {
+          category = "Normal weight";
+        } else if (bmi <= 39.9) {
+          category = "Overweight";
+        } else {
+          category = "Obese";
+        }
+
+        resultElement.textContent = "Your BMI is: " + bmi.toFixed(2) + " (" + category + ")";
+        
+        // Fade-in effect for result using jQuery animate
+        $('#result').css("opacity", 0).animate({ opacity: 1 }, 1000); // Fade-in effect for result
+      });
+    });
+  </script>
+</body>
+</html>

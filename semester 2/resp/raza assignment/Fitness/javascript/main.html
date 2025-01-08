@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding for proper text display -->
+    <meta charset="UTF-8">
+    
+    <!-- Viewport meta tag to ensure proper rendering on all devices, especially mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the webpage -->
+    <title>High-Tech Workout Page</title>
+    
+    <!-- External CSS file for the navigation styling -->
+    <link rel="stylesheet" href="nav.css">
+
+    <!-- Internal CSS for the page layout and design -->
+    <style>
+        /* Basic styling for the entire body of the page */
+        body {
+            font-family: 'Arial', sans-serif; /* Sets the font for the page */
+            margin: 0; /* Removes any default margin */
+            padding: 0; /* Removes any default padding */
+            background-color: rgb(246, 238, 228); /* Sets background color */
+            color: #fff; /* White text color */
+            text-align: center; /* Centers text content */
+        }
+      
+        /* Container to hold the page content with margin and padding adjustments */
+        .container {
+            margin-top: 5%; /* Adds top margin */
+            padding: 20px; /* Adds padding around the container */
+        }
+
+        /* Styling for the workout section that contains multiple workout cards */
+        .workout-section {
+            display: flex; /* Flexbox layout */
+            flex-wrap: wrap; /* Allows the content to wrap */
+            justify-content: space-around; /* Distributes cards evenly */
+            gap: 10px; /* Sets space between the cards */
+        }
+
+        /* Styling for individual workout cards */
+        .workout-card {
+            background-color: #292b2c; /* Dark background for the card */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+            padding: 20px; /* Adds padding inside the card */
+            width: 350px; /* Fixed width */
+            transition: transform 0.3s; /* Smooth transition for hover effect */
+            overflow: hidden; /* Prevents content from overflowing */
+        }
+
+        /* Hover effect for workout cards to lift them */
+        .workout-card:hover {
+            transform: translateY(-10px); /* Moves the card upwards on hover */
+        }
+
+        /* Styling for images inside the workout cards */
+        .workout-card img {
+            width: 100%; /* Makes image take full width of the card */
+            border-radius: 10px; /* Rounds the image corners */
+        }
+
+        /* Heading styling inside each workout card */
+        .workout-card h3 {
+            margin-top: 15px; /* Adds margin on top of the heading */
+            color: #00bfae; /* Greenish color for the heading */
+        }
+
+        /* Paragraph styling inside each workout card */
+        .workout-card p {
+            color: #ddd; /* Light gray color for text */
+        }
+
+        /* Styling for the section with downloadable files */
+        .file-section {
+            margin-top: 30px; /* Adds top margin */
+            background-color: #2c3e50; /* Dark background for the section */
+            padding: 20px; /* Adds padding inside the section */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        /* Heading style for the file section */
+        .file-section h2 {
+            color: #1abc9c; /* Light greenish color for the heading */
+        }
+
+        /* Styling for the file list without bullet points */
+        .file-list {
+            list-style-type: none; /* Removes the default list style */
+            padding: 0; /* Removes padding */
+        }
+
+        /* Styling for each list item in the file section */
+        .file-list li {
+            margin: 10px 0; /* Adds space between list items */
+            font-size: 1.1em; /* Slightly larger font size for readability */
+        }
+
+        /* Link styling for downloadable files */
+        a {
+            color: #00bfae; /* Green color for links */
+            text-decoration: none; /* Removes underline from links */
+        }
+
+        /* Hover effect for links to underline them */
+        a:hover {
+            text-decoration: underline; /* Underlines the link on hover */
+        }
+
+        /* Styling for the testimonial section */
+        .testimonial-section {
+            margin-top: 40px; /* Adds top margin */
+            background-color: #1c1f24; /* Dark background for testimonials */
+            padding: 20px; /* Adds padding */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        /* Heading style for the testimonial section */
+        .testimonial-section h2 {
+            color: #f39c12; /* Yellow color for heading */
+        }
+
+        /* Styling for each testimonial */
+        .testimonial {
+            font-style: italic; /* Italic style for testimonials */
+            color: #ccc; /* Light gray text color */
+            margin-bottom: 20px; /* Adds bottom margin */
+        }
+
+        /* Styling for the name or signature after the testimonial */
+        .testimonial span {
+            display: block; /* Makes the name appear on a new line */
+            color: #fff; /* White color for the name */
+            margin-top: 10px; /* Adds top margin */
+        }
+
+        /* Styling for the workout tips section */
+        .tip-section {
+            margin-top: 30px; /* Adds top margin */
+            background-color: #2c3e50; /* Dark background */
+            padding: 20px; /* Adds padding */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        /* Heading style for the tip section */
+        .tip-section h2 {
+            color: #1abc9c; /* Light green color for heading */
+        }
+
+        /* Styling for each workout tip */
+        .tip {
+            color: #ddd; /* Light gray text color */
+            margin-bottom: 10px; /* Adds bottom margin */
+        }
+
+        /* Styling for the contact section */
+        .contact-section {
+            margin-top: 30px; /* Adds top margin */
+            padding: 20px; /* Adds padding */
+            border-radius: 10px; /* Rounded corners */
+            background-color: #1e2a34; /* Dark blue background */
+        }
+
+        /* Heading style for the contact section */
+        .contact-section h2 {
+            color: #e67e22; /* Orange color for the heading */
+        }
+
+        /* Paragraph style for the contact section */
+        .contact-section p {
+            color: #ddd; /* Light gray color for text */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar for easy access to other pages -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <!-- Links to other pages in the fitness app -->
+            <li><a href="../fitnessapp/home.html" class="nav-btn">Home</a></li>
+            <li><a href="../javascript/main.html" class="nav-btn">Workout Guide</a></li>
+            <li><a href="../bmi2/index.html" class="nav-btn">BMI App</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content of the page -->
+    <div class="container">
+        
+        <!-- Section displaying workout cards -->
+        <section class="workout-section">
+            <!-- Strength Training Card -->
+            <div class="workout-card">
+                <img src="1.avif" alt="Strength Training"> <!-- Image for strength training -->
+                <a href="muscle-gain.html"><h3>Strength Training</h3></a> <!-- Link to strength training page -->
+                <p>Boost your muscle growth with specialized strength exercises.</p> <!-- Description -->
+            </div>
+
+            <!-- Cardio Workout Card -->
+            <div class="workout-card">
+                <img src="cardio.webp" alt="Cardio Workout"> <!-- Image for cardio workout -->
+                <a href="cardio.html"><h3>Cardio Blast</h3></a> <!-- Link to cardio workout page -->
+                <p>Enhance your endurance and stamina with high-intensity cardio.</p> <!-- Description -->
+            </div>
+
+            <!-- Yoga Session Card -->
+            <div class="workout-card">
+                <img src="4.jpg" alt="Yoga Session"> <!-- Image for yoga session -->
+                <a href="yoga.html"><h3>Yoga & Flexibility</h3></a> <!-- Link to yoga page -->
+                <p>Improve your balance and flexibility for better mobility.</p> <!-- Description -->
+            </div>
+        </section>
+
+        <!-- Testimonial section with user feedback -->
+        <section class="testimonial-section">
+            <h2>What Our Users Are Saying</h2>
+            <!-- Testimonial from user Alex -->
+            <p class="testimonial">"This workout tracker has transformed my routine and helped me stay motivated!" <span>- Alex J.</span></p>
+            <!-- Testimonial from user Sarah -->
+            <p class="testimonial">"The detailed plans and tips are exactly what I needed to level up my fitness." <span>- Sarah M.</span></p>
+        </section>
+
+        <!-- Tips section to provide users with helpful workout advice -->
+        <section class="tip-section">
+            <h2>Workout Tips</h2>
+            <!-- Individual workout tips -->
+            <p class="tip">Ensure proper warm-up before each session to prevent injury and improve performance.</p>
+            <p class="tip">Stay hydrated and maintain a balanced diet to maximize your fitness gains.</p>
+        </section>
+
+    <!-- code to download pdf -->
+        <section class="file-section">
+            <h2>Download Attached Files</h2>
+            <ul class="file-list">
+                <li><a href="workoutplan.pdf" download>Workout Plan PDF</a></li>
+                <li><a href="Nutrition-Guide.pdf" download>Nutrition Guide PDF</a></li>
+            </ul>
+        </section>
+    <!-- footer -->
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <p>For any questions or personalized guidance, reach out to us at 
+                <br><a href="mailto:pranav.talwar@rdpolytech.ca">pranav.talwar@rdpolytech.ca</a><br><a href="mailto:manjot.singh@rdpolytech.ca">manjot.singh@rdpolytech.ca</a><br><a href="mailto:bhagatbir.singh@rdpolytech.ca">bhagatbir.singh@rdpolytech.ca</a></p>
+        </section>
+    </div>
+
+</body>
+</html>
