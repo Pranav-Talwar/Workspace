@@ -8,12 +8,23 @@
 </head>
 
 <body>
+  <% if (locals.numof) { %>
+    number is <%= numof %>
+
+  <%} else { %>
+    <h1>write </h1>
+
+    <% } %>
+   
+
   <!-- Write your code here -->
   <form action="/submit" method="POST">
     <input type="text" name="fName" placeholder="First name">
     <input type="text" name="lName" placeholder="Last name">
     <input type="submit" value="OK">
   </form>
+
+
 </body>
 
 </html>

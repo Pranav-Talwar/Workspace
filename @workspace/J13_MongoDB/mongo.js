@@ -11,4 +11,4 @@ mongoose.connect('mongodb://localhost:27017/movieApp', {useNewUrlParser: true, u
   {
     title: 'haha',
     year: 1988
-  }
+  }  

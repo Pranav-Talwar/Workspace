@@ -1,0 +1,7 @@
+npm create vite@latest my-react-app --template react
+npm i bootstrap@5.3.2
+import "bootstrap/dist/css/bootstrap.min.css";
+6178369cf26b4e9dbe95ae35437ed2cf
+24e17af2cdca4ab8b7088eacbcba6df8
+24e17af2cdca4ab8b7088eacbcba6df8
+fdvdsf

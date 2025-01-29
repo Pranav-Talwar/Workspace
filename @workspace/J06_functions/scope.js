@@ -156,3 +156,28 @@ function a({title}){
 }
 const x = movie.map(a)
 console.log(x);
+
+
+
+xy = [1,2,3,4,5]
+const fruits = [
+    { name: 'apple', color: 'red' },
+    { name: 'banana', color: 'yellow' },
+    { name: 'kiwi', color: 'green' },
+    { name: 'orange', color: 'orange' },
+    { name: 'pineapple', color: 'yellow' }
+];
+
+const gre= fruits.filter(fruit=> fruit.color ==='red')
+console.log(gre);
+
+const transformedFruits = fruits.map(fruit => ({
+    fruitName: fruit.name.toUpperCase(),
+    fruitColor: fruit.color.toUpperCase()
+}));
+
+console.log(transformedFruits);
+
+const aaa = [1,2,3,4,5].forEach(a = a = {
+
+})

@@ -1,0 +1,45 @@
+{
+    "status": "ok",
+    "totalResults": 3,
+    "articles": [
+      {
+        "source": {
+          "id": null,
+          "name": "Yahoo Entertainment"
+        },
+        "author": "Frank Schwab",
+        "title": "Commanders-Lions: Jayden Daniels, Washington pull off one of NFL's greatest playoff upsets in 45-31 shootout win over Detroit - Yahoo Sports",
+        "description": "Detroit, which needed to win just two home games to make the first Super Bowl in franchise history, is out. The Commanders are moving onto the NFC title game...",
+        "url": "https://sports.yahoo.com/live/commanders-lions-jayden-daniels-washington-pull-off-one-of-nfls-greatest-playoff-upsets-in-45-31-shootout-win-over-detroit-000005032.html",
+        "urlToImage": "https://s.yimg.com/ny/api/res/1.2/o8u7K8CceGLH5Uhj__nJSg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://s.yimg.com/os/creatr-uploaded-images/2025-01/cc844910-d61a-11ef-9bc5-cd43735caf5f",
+        "publishedAt": "2025-01-19T04:28:00Z",
+        "content": "The Washington Commanders finished tied for the second-worst record in the NFL last season. They had been a laughingstock for more than 20 years. Getting the No. 2 pick of the NFL Draft, which became… [+9243 chars]"
+      },
+      {
+        "source": {
+          "id": "reuters",
+          "name": "Reuters"
+        },
+        "author": "Jonathan Landay, Eric Cox",
+        "title": "Trump rethinking next week's planned immigration raids, report says - Reuters",
+        "description": "President-elect Donald Trump's incoming administration is reconsidering plans for immigration raids in Chicago next week after details were leaked, Trump's “border czar” Tom Homan told the Washington Post in an interview on Saturday.",
+        "url": "https://www.reuters.com/world/us/trump-immigration-forces-target-multiple-cities-border-czar-says-2025-01-18/",
+        "urlToImage": "https://www.reuters.com/resizer/v2/IUQQCXIMPJLUFDOGLWNRUJQOFQ.jpg?auth=856a6a4cb64539b69014b96eabc5693cd4dbc1ae361f2f18d9481afc78a3ced6&height=1005&width=1920&quality=80&smart=true",
+        "publishedAt": "2025-01-19T00:50:00Z",
+        "content": null
+      },
+      {
+        "source": {
+          "id": "cnn",
+          "name": "CNN"
+        },
+        "author": "Deidre McPhillips",
+        "title": "HHS invests nearly $600 million in Moderna’s bird flu vaccine development - CNN",
+        "description": "The US Department of Health and Human Services will award $590 million to Moderna to continue developing a vaccine to protect against bird flu, the pharmaceutical company announced Friday.",
+        "url": "https://www.cnn.com/2025/01/17/health/bird-flu-vaccine-funding-hhs-moderna/index.html",
+        "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/ap24176203928482.jpg?c=16x9&q=w_800,c_fill",
+        "publishedAt": "2025-01-17T22:27:00Z",
+        "content": "The US Department of Health and Human Services will award $590 million to Moderna to continue developing a vaccine to protect against bird flu, the pharmaceutical company announced Friday.\r\nIn 2023, … [+2335 chars]"
+      }
+    ]
+  }
