@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const mongoURI = "mongodb://localhost:27017";
+const mongoURI = "mongodb://localhost:27017/iNotebook";
 const connectToMongo = async () => {
   await mongoose
     .connect(mongoURI)
@@ -8,3 +8,4 @@ const connectToMongo = async () => {
 };
 
 module.exports = connectToMongo;
+
