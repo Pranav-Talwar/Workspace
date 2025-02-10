@@ -1,0 +1,29 @@
+Step 8: Manually Create Configuration Files
+If the npx tailwindcss init -p command still doesn’t work, you can manually create the configuration files:
+
+Create tailwind.config.js:
+
+javascript
+Copy
+// tailwind.config.js
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+Create postcss.config.js:
+
+javascript
+Copy
+// postcss.config.js
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
