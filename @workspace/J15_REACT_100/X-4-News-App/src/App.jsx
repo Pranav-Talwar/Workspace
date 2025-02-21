@@ -19,7 +19,6 @@ class App extends Component {
          <Route exact path="/science" element={<News apiKey={this.apiKey} key="science" pageSize={16} country="us" category="science"/>}/>
          <Route exact path="/sports" element={<News apiKey={this.apiKey} key="sports" pageSize={16} country="us" category="sports"/>}/>
          <Route exact path="/technology" element={<News apiKey={this.apiKey} key="technology" pageSize={16} country="us" category="technology"/>}/>
-    
       </Routes>
       </Router>
     </div>;

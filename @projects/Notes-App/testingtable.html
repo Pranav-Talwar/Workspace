@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Cases Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .pass {
+            color: green;
+            font-weight: bold;
+        }
+        .fail {
+            color: red;
+            font-weight: bold;
+        }
+        .test-type {
+            text-transform: capitalize;
+        }
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="title">Test Case Table</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Test Case</th>
+                    <th>Steps</th>
+                    <th>Expected Result</th>
+                    <th>Test Type</th>
+                    <th>Actual Outcome</th>
+                    <th>Pass/Fail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1. Check if AddNote component renders</td>
+                    <td>1. Navigate to the AddNote component. 2. Check if title, description, and tag input fields are present, along with a submit button.</td>
+                    <td>The AddNote component should render with title, description, and tag input fields, along with a submit button.</td>
+                    <td class="test-type">Rendering Test</td>
+                    <td>AddNote component rendered with all expected fields and submit button.</td>
+                    <td class="pass">Pass</td>
+                </tr>
+                <tr>
+                    <td>2. Check form validation for title</td>
+                    <td>1. Enter a title with fewer than 3 characters. 2. Try to submit the form.</td>
+                    <td>If the title has fewer than 3 characters, an error message should appear: "Title must be at least 3 characters long."</td>
+                    <td class="test-type">Validation Test</td>
+                    <td>Error message displayed: "Title must be at least 3 characters long."</td>
+                    <td class="pass">Pass</td>
+                </tr>
+                <tr>
+                    <td>3. Check form validation for description</td>
+                    <td>1. Enter a description with fewer than 3 characters. 2. Try to submit the form.</td>
+                    <td>If the description has fewer than 3 characters, an error message should appear: "Description must be at least 3 characters long."</td>
+                    <td class="test-type">Validation Test</td>
+                    <td>Error message displayed: "Description must be at least 3 characters long."</td>
+                    <td class="pass">Pass</td>
+                </tr>
+                <tr>
+                    <td>4. Check note addition functionality</td>
+                    <td>1. Enter valid title, description, and tag data. 2. Click the submit button.</td>
+                    <td>On submitting valid data, the new note should be added to the notes list.</td>
+                    <td class="test-type">Integration Test</td>
+                    <td>New note added to the list and displayed.</td>
+                    <td class="pass">Pass</td>
+                </tr>
+                <tr>
+                    <td>5. Check if Notes component renders</td>
+                    <td>1. Navigate to the Notes component. 2. Check if the list of notes is displayed with title, description, and tag for each note.</td>
+                    <td>The Notes component should render the list of notes, displaying title, description, and tag for each note.</td>
+                    <td class="test-type">Rendering Test</td>
+                    <td>Notes displayed with correct title, description, and tag.</td>
+                    <td class="pass">Pass</td>
+                </tr>
+                <tr>
+                    <td>6. Check if notes are fetched from API</td>
+                    <td>1. Load the Notes component. 2. Check if notes are fetched and displayed from the backend API.</td>
+                    <td>Notes should be fetched from the backend API and rendered in the Notes component.</td>
+                    <td class="test-type">API Test</td>
+                    <td>Notes fetched from API and displayed correctly.</td>
+                    <td class="pass">Pass</td>
+                </tr>
+                <tr>
+                    <td>7. Check note deletion functionality</td>
+                    <td>1. Click the delete button for a note. 2. Confirm the deletion.</td>
+                    <td>After clicking the delete button, the note should be removed from the list and API should reflect the change.</td>
+                    <td class="test-type">Integration Test</td>
+                    <td>Note deleted from both the list and the API.</td>
+                    <td class="pass">Pass</td>
+                </tr>
+                <tr>
+                    <td>8. Check note editing functionality</td>
+                    <td>1. Click the edit icon for a note. 2. Edit the note details. 3. Save the changes.</td>
+                    <td>After editing a note in the modal, the changes should be reflected in the notes list and the backend should be updated.</td>
+                    <td class="test-type">Integration Test</td>
+                    <td>Note updated in the list and backend.</td>
+                    <td class="pass">Pass</td>
+                </tr>
+                <tr>
+                    <td>9. Check modal visibility on note update</td>
+                    <td>1. Click the edit icon for a note. 2. Verify that the modal is displayed with pre-filled values for title, description, and tag.</td>
+                    <td>When clicking the edit icon, the modal should be shown, pre-filled with the current note's title, description, and tag.</td>
+                    <td class="test-type">UI Test</td>
+                    <td>Modal displayed with pre-filled note details.</td>
+                    <td class="pass">Pass</td>
+                </tr>
+                <tr>
+                    <td>10. Check empty state for Notes</td>
+                    <td>1. Load the Notes component with no notes available. 2. Check if a message is displayed.</td>
+                    <td>If there are no notes in the system, display a message like "No notes to display."</td>
+                    <td class="test-type">UI Test</td>
+                    <td>Message "No notes to display." shown.</td>
+                    <td class="pass">Pass</td>
+                </tr>
+                <tr>
+                    <td>11. Check navigation to About page</td>
+                    <td>1. Click the About link in the Navbar.</td>
+                    <td>Clicking on the About link should navigate to the About page.</td>
+                    <td class="test-type">Navigation Test</td>
+                    <td>Navigation to About page successful.</td>
+                    <td class="pass">Pass</td>
+                </tr>
+                <tr>
+                    <td>12. Check if error handling works</td>
+                    <td>1. Simulate an API failure (e.g., network error). 2. Perform add/edit/delete operations.</td>
+                    <td>In case of an error (e.g., API failure), the error message should be displayed.</td>
+                    <td class="test-type">Error Handling Test</td>
+                    <td>Error message displayed for failed API operations.</td>
+                    <td class="pass">Pass</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
