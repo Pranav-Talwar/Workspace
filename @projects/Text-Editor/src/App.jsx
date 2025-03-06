@@ -1,36 +1,31 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import About from "./components/About";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 function App() {
-  const [mode, setMode] = useState("light");
+  const [theme, setTheme] = useState("light");
 
-  const toggleMode = () => {
-    if (mode === "light") {
-      setMode("dark");
-      document.body.style.background = "#042743";
+  const toggleTheme = () => {
+    if (theme === "light") {
+      setTheme("dark");
+      document.documentElement.classList.add("dark");
     } else {
-      setMode("light");
-      document.body.style.background = "white";
+      setTheme("light");
+      document.documentElement.classList.remove("dark");
     }
   };
 
   return (
-    <>
-      <Router>
-        <Navbar title="Text-Editor" about="About" mode={mode} togglemode={toggleMode} />
-        <div className="container my-3">
-          <Routes>
-            <Route exact path="/" element={<TextForm heading="Enter Your Text To Analyze Below" mode={mode} />} />
-            <Route path="/about" element={<About mode={mode} togglemode={toggleMode} />} />
-          </Routes>
-        </div>
-      </Router>
-    </>
+    <div
+      className={`min-h-screen transition-colors duration-300 ${
+        theme === "light" ? "bg-white text-gray-900" : "bg-gray-900 text-gray-100"
+      }`}
+    >
+      <main className="container mx-auto p-4">
+        <TextForm />
+      </main>
+    </div>
   );
 }
 
