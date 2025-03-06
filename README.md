@@ -1,1 +1,1 @@
-Welcome to my personal coding space! Here, I’m constantly learning and refining my skills. In the @workspace folder, you'll find the code I practice and  I explore new concepts here, and in the @projects folder, you can check out the projects I'm actively developing.
+Welcome to my personal coding space! Here, I’m constantly learning and refining my skills. In the @workspace folder, you'll find the code I practice and explore new concepts here, and in the @projects folder, you can check out the projects I'm actively developing.
