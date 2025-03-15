@@ -7,6 +7,7 @@ import BookItem from './BookItem';
 export default function Home() {
   return (
     <div>
+
       <Book/> {/* Use the BookCard component properly */}
     </div>
   );

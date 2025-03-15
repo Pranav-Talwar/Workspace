@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testing Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+    
+      
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    tr:hover {
+      background-color: #ddd;
+    }
+    .pass {
+      font-weight: bold;
+    }
+    .fail {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Testing Table</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Test ID</th>
+        <th>Description</th>
+        <th>Step</th>
+        <th>Expected Outcome</th>
+        <th>Actual Outcome</th>
+        <th>Pass/Fail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>T1</td>
+        <td>Toggle Case functionality</td>
+        <td>1. Type some text in the text area. <br> 2. Click "Toggle Case" button.</td>
+        <td>The text should toggle between uppercase and lowercase each time the button is clicked.</td>
+        <td>The text toggles case as expected.</td>
+        <td class="pass">Pass</td>
+      </tr>
+      <tr>
+        <td>T2</td>
+        <td>Remove extra spaces</td>
+        <td>1. Type a sentence with multiple spaces. <br> 2. Click "Remove Spaces" button.</td>
+        <td>Extra spaces between words should be removed, and leading/trailing spaces should be trimmed.</td>
+        <td>Extra spaces are removed, and leading/trailing spaces are trimmed.</td>
+        <td class="pass">Pass</td>
+      </tr>
+      <tr>
+        <td>T3</td>
+        <td>Add Lorem Ipsum text</td>
+        <td>1. Click "Add Lorem Ipsum" button.</td>
+        <td>The text area should be filled with Lorem Ipsum text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."</td>
+        <td>Lorem Ipsum text is correctly added to the text area.</td>
+        <td class="pass">Pass</td>
+      </tr>
+      <tr>
+        <td>T4</td>
+        <td>Reverse text</td>
+        <td>1. Type some text in the text area. <br> 2. Click "Reverse Text" button.</td>
+        <td>The order of characters in the text should be reversed.</td>
+        <td>Text is reversed as expected.</td>
+        <td class="pass">Pass</td>
+      </tr>
+      <tr>
+        <td>T5</td>
+        <td>Remove punctuation</td>
+        <td>1. Type some text with punctuation (e.g., "Hello, world!"). <br> 2. Click "Remove Punctuation".</td>
+        <td>All punctuation marks (., /, ?, etc.) should be removed from the text.</td>
+        <td>Punctuation marks are correctly removed.</td>
+        <td class="pass">Pass</td>
+      </tr>
+      <tr>
+        <td>T6</td>
+        <td>Copy text to clipboard</td>
+        <td>1. Type some text in the text area. <br> 2. Click "Copy Text" button.</td>
+        <td>The text should be copied to the clipboard, and an alert should appear confirming the action.</td>
+        <td>The text is copied to the clipboard, and the alert appears.</td>
+        <td class="pass">Pass</td>
+      </tr>
+      <tr>
+        <td>T7</td>
+        <td>Clear text</td>
+        <td>1. Type some text in the text area. <br> 2. Click "Clear Text" button.</td>
+        <td>The text area should be cleared (set to empty).</td>
+        <td>Text is cleared as expected.</td>
+        <td class="pass">Pass</td>
+      </tr>
+      <tr>
+        <td>T8</td>
+        <td>Toggle text color</td>
+        <td>1. Type some text in the text area. <br> 2. Click "Toggle Text Color" button.</td>
+        <td>The text color should toggle between gray and red.</td>
+        <td>The text color toggles between gray and red as expected.</td>
+        <td class="pass">Pass</td>
+      </tr>
+      <tr>
+        <td>T9</td>
+        <td>Word count display</td>
+        <td>1. Type some text in the text area. <br> 2. Observe the "Word Count" display.</td>
+        <td>The word count should match the number of words in the text area.</td>
+        <td>The word count is calculated correctly.</td>
+        <td class="pass">Pass</td>
+      </tr>
+      <tr>
+        <td>T10</td>
+        <td>Sentence count display</td>
+        <td>1. Type a paragraph with sentences. <br> 2. Observe the "Sentence Count" display.</td>
+        <td>The sentence count should correctly reflect the number of sentences in the text.</td>
+        <td>The sentence count is displayed correctly.</td>
+        <td class="pass">Pass</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

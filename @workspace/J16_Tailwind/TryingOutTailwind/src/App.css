@@ -1,1 +1,28 @@
 @import "tailwindcss";
+.custom-shadow {
+    /* Adjust the shadow parameters and RGBA color to get your desired hue */
+    box-shadow: 0 10px 30px rgba(191, 180, 237, 0.5);
+  }
+  
+  /* Animation for the gradient background */
+@keyframes gradientAnimation {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    50% {
+      filter: hue-rotate(30deg);
+    }
+    100% {
+      filter: hue-rotate(0deg);
+    }
+  }
+  
+  .animate-gradient {
+    animation: gradientAnimation 10s infinite;
+  }
+  
+  /* Custom shadow with a purple hue */
+  .custom-shadow {
+    box-shadow: 0 10px 30px rgba(128, 0, 128, 0.3);
+  }
+  
