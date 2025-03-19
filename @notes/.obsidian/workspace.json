@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study/N03_NEXT JS.md",
+                "file": "daily planner/2025-03-15.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "N03_NEXT JS"
+              "title": "2025-03-15"
             }
           }
         ],
@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "01bf49506e6b9c1c",
@@ -185,12 +186,12 @@
   },
   "active": "5b410e022f88889a",
   "lastOpenFiles": [
-    "study/N02_week 12.md",
     "study/N03_NEXT JS.md",
+    "study/N02_week 12.md",
     "study/N04_Docker.md",
     "study/N01_deployment.md",
     "daily planner/@need to be done.md",
-    "daily planner/2025-03-05.md",
+    "daily planner/2025-03-15.md",
     "one.md",
     "study/Untitled",
     "daily planner/2025-03-04.md",
